@@ -2,8 +2,31 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { ReactTypeformEmbed } from 'react-typeform-embed';
+import Modal from '../components/modal'
 
 class Layout extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      show: false
+    };
+    
+    this.showModal = this.showModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+  
+  showModal (e) {
+    e.preventDefault();
+    this.setState({
+      show: !this.state.show
+    });
+    return false;
+  }
+  
+  closeModal (e) {
+    this.setState({ show: false });
+  }
+
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -32,7 +55,11 @@ class Layout extends React.Component {
           <p className="white f3 lh-copy">The Harrison R. & Azzie Bell Singletary Family Scholarship is an endowment scholarship established in honor of the matriarch and patriarch of this family. The scholarship supports scholars who believe in the family values of Faith, Family, Ethics, Education and Community Service.
         </p>
           <div className="tc">
-            <a href="#" class="link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a>
+            <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
+            onClick={e => {
+              this.showModal(e);
+            }}
+          >Donate</a>
           </div>
           </div>
         
@@ -78,7 +105,13 @@ class Layout extends React.Component {
               
               <div className="m-typeform relative"><ReactTypeformEmbed url="http://tnsingle.typeform.com/to/B4ZZDK44" /></div>
             </div>
+            <div className="o-footer-bottom white bg-near-black pa3 f6 tc">
+              Created with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>
+            </div>
           </footer>
+          <Modal onClose={e => {this.showModal(e)}} show={this.state.show}>
+                    Message in Modal
+          </Modal>
         </Wrapper>
     )
   }

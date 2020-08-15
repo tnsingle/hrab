@@ -1,13 +1,8 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Gatsby`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `gatsbyjs`,
-    },
+    title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
+    author: `Tarise Singletary`,
+    description: `Details about the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
