@@ -3,6 +3,7 @@ module.exports = {
     title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
     author: `Tarise Singletary`,
     description: `Details about the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
+    image: `/hrab-logo-open-graph-08.png`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -71,14 +72,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
+        short_name: `HRAB Scholarship`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#26547C`,
         display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icons: [
+          {
+              src: `/android-chrome-192x192.png`,
+              sizes: `192x192`,
+              type: `image/png`
+          },
+          {
+              src: `/android-chrome-512x512.png`,
+              sizes: `512x512`,
+              type: `image/png`
+          }
+      ],
+  
       },
     },
     {
