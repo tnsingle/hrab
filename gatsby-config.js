@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `http://singletaryscholarship.fund/`,
     title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
     author: `Tarise Singletary`,
     description: `Details about the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
