@@ -13,18 +13,19 @@ export default class Modal extends React.Component {
       <div style={{
         backgroundColor: `rgba(255, 255, 255, 0.75)`
       }}
-      className="fixed top-0 bottom-0 left-0 right-0 w-100 height-100 z-999">
+      className="o-modal__overlay fixed top-0 bottom-0 left-0 right-0 w-100 height-100 z-999">
+
         <div style={{
           position: `absolute`,
           left: `50%`,
           top: `50%`,
           transform: `translate(-50%, -50%)`
         }}
-        className="modal bg-white w-50 pa4" id="modal">
-        <div className="content">{this.props.children}</div>
-        <div className="actions">
-          <a href="#" className="toggle-button" onClick={this.onClose}>
-            close
+        className="o-modal bg-white mw7 w-80 pb5 tc br3 shadow-4 overflow-hidden" id="modal">
+        <div className="o-modal__content">{this.props.children}</div>
+        <div className="o-modal__actions">
+          <a href="#" className="a-link o-modal__toggle-button ttu f6" onClick={this.onClose}>
+            x close
           </a>
         </div>
       </div>
