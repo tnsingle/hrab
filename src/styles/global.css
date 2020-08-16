@@ -54,8 +54,30 @@ html {font-size: 1.0em;}
 	border-left-width: 3px;
 }
 
+.o-module__title{
+	border-bottom: 5px solid #FFD800;
+}
+
+.o-modal__toggle-button{
+	text-decoration: none;
+}
+
+.o-modal__toggle-button,
+.o-modal__toggle-button:visited{
+	color: #26547C;
+}
+
+.o-modal__toggle-button:hover,
+.o-modal__toggle-button:active{
+	color: #0D324D;
+}
+
 .brand-black{
 	color: #0D1321;
+}
+
+.brand-blue{
+	color: #26547C;
 }
 
 .brand-dark-blue{
