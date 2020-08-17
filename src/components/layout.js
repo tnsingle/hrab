@@ -110,11 +110,11 @@ class Layout extends React.Component {
             </div>
           </footer>
           <Modal onClose={e => {this.showModal(e)}} show={this.state.show}>
-                    <h2 className="o-module__title ttu f2 brand-blue-bg white pa5">Thank you for your donation!</h2>
-                    <p className="ph5 gray f4">You will be taken to A&T's donation page in a new tab at:<br/> <a className="brand-blue"
+                    <h2 className="o-module__title ttu f3 f2-ns brand-blue-bg white pa4 pa5-ns">Thank you for your donation!</h2>
+                    <p className="ph3 ph5-ns gray f4-ns">You will be taken to A&T's donation page in a new tab at:<br/> <a className="brand-blue"
                     href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo" 
                     target="_blank">https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo</a>.</p>
-                    <p className="ph5 gray f5">If our scholarship does not yet appear as a selection in the dropdown,<br/>you will have the option to type in <strong>"Harrison R. and Azzie Bell Singletary Family Scholarship"</strong>.</p>
+                    <p className="ph3 ph5-ns gray f5">If our scholarship does not yet appear as a selection in the dropdown,<br/>you will have the option to type in <strong>"Harrison R. and Azzie Bell Singletary Family Scholarship"</strong>.</p>
                     <a 
                     className="link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3"
                     href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo"
