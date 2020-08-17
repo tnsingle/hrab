@@ -21,7 +21,7 @@ export default class Modal extends React.Component {
           top: `50%`,
           transform: `translate(-50%, -50%)`
         }}
-        className="o-modal bg-white mw7 w-80 pb5 tc br3 shadow-4 overflow-hidden" id="modal">
+        className="o-modal bg-white mw7 w-100 w-80-ns pb3 pb5-ns tc br3 shadow-4 overflow-hidden" id="modal">
         <div className="o-modal__content">{this.props.children}</div>
         <div className="o-modal__actions">
           <a href="#" className="a-link o-modal__toggle-button ttu f6" onClick={this.onClose}>
