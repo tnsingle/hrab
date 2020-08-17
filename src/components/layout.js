@@ -101,9 +101,8 @@ class Layout extends React.Component {
           <footer className="o-footer">
             <div className="o-footer-content bg-brand-dark-blue pa5 white">
               <h2 id="contact" className="o-footer-heading ttu normal f2 pl3 bl">Contact Us</h2>
-              <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the form below.</p>
-              
-              <div className="m-typeform relative"><ReactTypeformEmbed url="http://tnsingle.typeform.com/to/B4ZZDK44" /></div>
+              <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the button below.</p>
+              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Launch Contact Form </a>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">
               Created with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>

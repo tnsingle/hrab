@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: titleTemplate,
         },
         {
           property: `og:description`,
@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -67,11 +67,15 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: titleTemplate,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          property: `twitter:image`,
+          content: image,
         },
       ]
         .concat(
