@@ -40,10 +40,13 @@ class Layout extends React.Component {
       header = ( 
         <header className="o-header -large-header -screen-bg relative w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
-          <div className="o-header-content__top flex">
-            <a href="/" className="link w-30 dib"><img src="./logo-dark-bg.png" /></a>
+          <div className="o-header-content__top flex flex-wrap">
+            <a href="/" className="link w-100 w-30-ns dib"><img src="./logo-dark-bg.png" /></a>
             <nav className="o-header__nav flex-grow-1">
-              <ul className="list flex f5 ttu justify-end items-center">
+              <ul className="list flex f5 ttu ml0 justify-end items-center">
+                <li className="ph2"><a href="#" className="a-nav-link link white dim" onClick={e => {
+              this.showModal(e);
+            }}>Donate</a></li>
                 <li className="ph2"><a href="#contact" className="a-nav-link link white dim">Contact Us</a></li>
                 <li className="ph2"><a href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
                 <li className="ph2"><a href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
@@ -51,7 +54,7 @@ class Layout extends React.Component {
             </nav>
           </div>
 
-          <div className="o-header-intro tc tl-l w-50-l mt5 ml6-l pl4-l bl-l">
+          <div className="o-header-intro tc tl-l w-50-l mt5-ns ml6-l pl4-l bl-l">
           <p className="white f3 lh-copy">The Harrison R. & Azzie Bell Singletary Family Scholarship is an endowment scholarship established in honor of the matriarch and patriarch of this family. The scholarship supports scholars who believe in the family values of Faith, Family, Ethics, Education and Community Service.
         </p>
           <div className="tc">
@@ -101,9 +104,8 @@ class Layout extends React.Component {
           <footer className="o-footer">
             <div className="o-footer-content bg-brand-dark-blue pa5 white">
               <h2 id="contact" className="o-footer-heading ttu normal f2 pl3 bl">Contact Us</h2>
-              <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the form below.</p>
-              
-              <div className="m-typeform relative"><ReactTypeformEmbed url="http://tnsingle.typeform.com/to/B4ZZDK44" /></div>
+              <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the button below.</p>
+              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Launch Contact Form </a>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">
               Created with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>

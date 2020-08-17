@@ -3,8 +3,8 @@ module.exports = {
     siteUrl: `http://singletaryscholarship.fund/`,
     title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
     author: `Tarise Singletary`,
-    description: `Details about the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
-    image: `/hrab-logo-open-graph-08.png`
+    description: `Official website of the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
+    image: `https://hrab-assets-temp.s3.amazonaws.com/hrab-logo-open-graph-08.png`
   },
   plugins: [
     `gatsby-plugin-styled-components`,
