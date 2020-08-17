@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: `og:title`,
-          content: titleTemplate,
+          content: title,
         },
         {
           property: `og:description`,
@@ -67,15 +67,11 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:title`,
-          content: titleTemplate,
+          content: title,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
-        {
-          property: `twitter:image`,
-          content: image,
         },
       ]
         .concat(

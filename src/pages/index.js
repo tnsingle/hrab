@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={"Home"}
+          title="Home"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
         />
         <section className="m-card pa5 flex flex-column flex-row-l items-center justify-center">
