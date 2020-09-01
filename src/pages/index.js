@@ -10,7 +10,7 @@ class IndexPage extends React.Component {
   constructor () {
     super();
     this.state = {
-      show: true
+      show: false
     };
     
     this.showTimeline = this.showTimeline.bind(this);
@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
           </div>
           </div>
         </section>
-        <Timeline onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5" />
+        <Timeline onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
         <section className="m-card -card-red pa4 tc flex items-center justify-center white f2">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 
           <br/><br/>

@@ -102,7 +102,7 @@ class Layout extends React.Component {
           {header}
           <main>{children}</main>
           <footer className="o-footer">
-            <div className="o-footer-content bg-brand-dark-blue pa5 white">
+            <div className="o-footer-content brand-dark-blue-bg pa5 white">
               <h2 id="contact" className="o-footer-heading ttu normal f2 pl3 bl">Contact Us</h2>
               <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the button below.</p>
               <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Launch Contact Form </a>
