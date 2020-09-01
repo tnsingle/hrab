@@ -80,6 +80,10 @@ html {font-size: 1.0em;}
 	color: #26547C;
 }
 
+.brand-gold{
+	color: #FFD800;
+}
+
 .brand-dark-blue{
 	color: #0D324D;
 }
@@ -90,5 +94,9 @@ html {font-size: 1.0em;}
 
 .brand-gold-bg{
 	background-color: #FFD800;
+}
+
+.brand-black-bg{
+	background-color: #0D1321;
 }
 
