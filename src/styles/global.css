@@ -48,6 +48,10 @@ html {font-size: 1.0em;}
 	box-shadow: none;
 }
 
+.-max-height-fill{
+	max-height: 1080px;
+}
+
 .-screen-bg:after{
 	content: "";
     width: 100%;
@@ -70,9 +74,13 @@ html {font-size: 1.0em;}
 	border-left-width: 3px;
 }
 
-.o-footer-heading{
-	border-left-color: #FFD800;
-	border-left-width: 3px;
+.o-header-video {
+	width: 100%;
+}
+
+.o-footer-content{
+	border-color: #FFD800;
+	border-width: 5px;
 }
 
 .m-typeform{

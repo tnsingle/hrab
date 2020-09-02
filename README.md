@@ -1,59 +1,164 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<!--
+*** Thanks for checking out this README Template. If you have a suggestion that would
+*** make this better, please fork the repo and create a pull request or simply open
+*** an issue with the tag "enhancement".
+*** Thanks again! Now go create something AMAZING! :D
+***
+***
+***
+*** To avoid retyping too much info. Do a search and replace for the following:
+*** tnsingle, hrab, twitter_handle, email
+-->
+
+
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://github.com/tnsingle/hrab">
+    <img src="static/hrab-logo-open-graph-08.png" alt="Logo">
   </a>
+
+  <h3 align="center">HRAB Singletary Scholarship</h3>
+
+  <p align="center">
+    Official website of the Harrison and Azzie Bell Singletary Scholarship Fund
+    <br />
+    <a href="https://singletaryscholarship.fund">View Live Site</a>
+    ·
+    <a href="https://github.com/tnsingle/hrab/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/tnsingle/hrab/issues">Request Feature</a>
+  </p>
 </p>
-<h1 align="center">
-  Gatsby's personal blog starter
-</h1>
 
-<img alt="screesnhot" src="./screenshot.png">
 
-This starter is a fork of Gatsby Starter Blog, the most popular starter by far – with second place being Gatsby Starter Netlify CMS. So I decided to combine the 2!
 
-## 🚀 Quick start
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-1.  **Create a Gatsby site.**
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
 
-    ```sh
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/thomaswang/gatsby-personal-starter-blog
-    ```
 
-1.  **Start developing.**
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-    Navigate into your new site’s directory and start it up.
+[![Product Name Screen Shot][product-screenshot]](https://singletaryscholarship.fund)
 
-    ```sh
-    cd my-blog-starter/
-    gatsby develop
-    ```
 
-1.  **Open the source code and start editing!**
+### Built With
 
-    Your site is now running at `http://localhost:8000`!
+* [GatsbyJs](https://www.gatsbyjs.com/)
+* [Tachyons](https://tachyons.io/docs/)
+* [AWS](https://aws.amazon.com/)
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-## 🎓 Learning Gatsby
+<!-- GETTING STARTED -->
+## Getting Started
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+To get a local copy up and running follow these simple steps.
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+1. Clone the repo
+```sh
+git clone https://github.com/tnsingle/hrab.git
+```
+2. Install packages
+```sh
+yarn
+```
+3. Run on your localhost
+```sh
+gatsby develop
+```
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+<!-- ROADMAP -->
+## Roadmap
 
-## 📔 Learning Netlify CMS with Gatsby
+See the [open issues](https://github.com/tnsingle/hrab/issues) for a list of proposed features (and known issues).
 
-Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/#authenticating-with-github) in the Gatsby documentation to finish the set up for your personal Netlify CMS with authentication.
 
-## 💫 Deploy
+<!-- CONTRIBUTING -->
+## Contributing
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/thomaswangio/gatsby-personal-starter-blog)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature-branch-name`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature-branch-name`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Nicole Singletary - [@inspiredbynikki](https://twitter.com/inspiredbynikki) - nikki@singletaryscholarship.fund
+
+Project Link: [https://github.com/tnsingle/hrab](https://github.com/tnsingle/hrab)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Coolors](https://coolors.co/) - Color scheme creation
+* [Font Awesome](https://fontawesome.com/) - Icons
+* [React](https://reactjs.org/)
+* [React Vertical Timeline](https://stephane-monnot.github.io/react-vertical-timeline/)
+* [README Template](https://github.com/othneildrew/Best-README-Template)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/tnsingle/hrab.svg?style=flat-square
+[contributors-url]: https://github.com/tnsingle/hrab/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tnsingle/hrab.svg?style=flat-square
+[forks-url]: https://github.com/tnsingle/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/tnsingle/hrab.svg?style=flat-square
+[stars-url]: https://github.com/tnsingle/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tnsingle/hrab.svg?style=flat-square
+[issues-url]: https://github.com/tnsingle/repo/issues
+[license-shield]: https://img.shields.io/github/license/tnsingle/hrab.svg?style=flat-square
+[license-url]: https://github.com/tnsingle/hrab/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/tnsingle
+[product-screenshot]: hrabscreenshot.png
