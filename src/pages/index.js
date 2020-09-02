@@ -15,6 +15,8 @@ class IndexPage extends React.Component {
     
     this.showTimeline = this.showTimeline.bind(this);
     this.closeTimeline = this.closeTimeline.bind(this);
+
+    this.timelineRef = React.createRef();
   }
   
   showTimeline (e) {
@@ -22,6 +24,10 @@ class IndexPage extends React.Component {
     this.setState({
       show: !this.state.show
     });
+
+    if(this.timelineRef.current){
+      this.timelineRef.current.scrollTo();
+    }
     return false;
   }
   
@@ -45,11 +51,11 @@ class IndexPage extends React.Component {
           <div className="mt3 tc">
           <a href="#" onClick={e => {
               this.showTimeline(e);
-            }} class="link brand-blue-bg white pa3 br3 f5 b dib dim">View Family History</a>
+            }} className="link brand-blue-bg white pa3 br3 f5 b dib dim">View Family History</a>
           </div>
           </div>
         </section>
-        <Timeline onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
+        <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
         <section className="m-card -max-height-fill -card-red pa4 tc flex items-center justify-center white f2">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 
           <br/><br/>

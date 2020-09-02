@@ -4,13 +4,32 @@ import 'react-vertical-timeline-component/style.min.css';
 import Collapse from "@kunukn/react-collapse";
 
 export default class Timeline extends React.Component {
+
+    constructor(props) {
+        super(props);
+        // create a ref to store the textInput DOM element
+        this.timelineRef = React.createRef();
+        this.scrollTo = this.scrollTo.bind(this);
+        this.onClose = this.onClose.bind(this);
+      }
+
     onClose = e => {
       this.props.onClose && this.props.onClose(e);
     };
+
+    scrollTo = () => {
+        if(this.timelineRef.current){
+            this.timelineRef.current.scrollIntoView({ 
+               behavior: "smooth"
+            });
+        }
+    };
+
     render() {
       return (
           <Collapse isOpen={this.props.show}>
-              <section className={ this.props.parentClassName }>
+              <section 
+                ref={ this.timelineRef } className={ this.props.parentClassName }>
         <VerticalTimeline>
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"

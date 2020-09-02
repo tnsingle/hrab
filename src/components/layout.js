@@ -13,6 +13,8 @@ class Layout extends React.Component {
     
     this.showModal = this.showModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+
+    this.contactRef = React.createRef();
   }
   
   showModal (e) {
@@ -25,6 +27,15 @@ class Layout extends React.Component {
   
   closeModal (e) {
     this.setState({ show: false });
+  }
+
+  scrollToRef(e, ref){
+    e.preventDefault();
+    if(ref && ref.current){
+      ref.current.scrollIntoView({ 
+        behavior: "smooth"
+     });
+    }
   }
 
   render() {
@@ -47,7 +58,9 @@ class Layout extends React.Component {
                 <li className="ph2"><a href="#" className="a-nav-link link white dim" onClick={e => {
               this.showModal(e);
             }}>Donate</a></li>
-                <li className="ph2"><a href="#contact" className="a-nav-link link white dim">Contact Us</a></li>
+                <li className="ph2"><a href="#contact" onClick={e => {
+              this.scrollToRef(e, this.contactRef);
+            }} className="a-nav-link link white dim">Contact Us</a></li>
                 <li className="ph2"><a href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
                 <li className="ph2"><a href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
               </ul>
@@ -102,8 +115,8 @@ class Layout extends React.Component {
           {header}
           <main>{children}</main>
           <footer className="o-footer brand-dark-blue-bg flex flex-column">
-            <div className="o-footer-content ma5 pv5 bt white">
-              <h2 id="contact" className="o-footer-heading ttu normal f2">Contact Us</h2>
+            <div className="o-footer-content mh5 mv6 ph5 bl white">
+              <h2 ref={ this.contactRef } id="contact" className="o-footer-heading ttu normal f2">Contact Us</h2>
               <h3 className="ttu f5 normal mb3">General Inquiries</h3>
               <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>
               <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Contact Form</a>
