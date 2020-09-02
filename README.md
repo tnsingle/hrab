@@ -140,6 +140,7 @@ Project Link: [https://github.com/tnsingle/hrab](https://github.com/tnsingle/hra
 * [Font Awesome](https://fontawesome.com/)
 * [React](https://reactjs.org/)
 * [README Template](https://github.com/othneildrew/Best-README-Template)
+* [React Vertical Timeline](https://stephane-monnot.github.io/react-vertical-timeline/)
 
 
 
