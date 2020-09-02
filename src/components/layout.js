@@ -38,7 +38,7 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       // big header
       header = ( 
-        <header className="o-header -large-header -screen-bg relative w-100 vh-100 overflow-hidden">
+        <header className="o-header -large-header -screen-bg -max-height-fill relative w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
           <div className="o-header-content__top flex flex-wrap">
             <a href="/" className="link w-100 w-30-ns dib"><img src="./logo-dark-bg.png" /></a>
@@ -101,14 +101,20 @@ class Layout extends React.Component {
       <Wrapper>
           {header}
           <main>{children}</main>
-          <footer className="o-footer">
-            <div className="o-footer-content bg-brand-dark-blue pa5 white">
-              <h2 id="contact" className="o-footer-heading ttu normal f2 pl3 bl">Contact Us</h2>
-              <p className="lh-copy f4">We're still working out the details of the scholarship.<br />If you have any questions, feel free to reach out to us using the button below.</p>
-              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Launch Contact Form </a>
+          <footer className="o-footer bg-brand-dark-blue flex flex-column">
+            <div className="o-footer-content ma5 pv5 bt white">
+              <h2 id="contact" className="o-footer-heading ttu normal f2">Contact Us</h2>
+              <h3 className="ttu f5 normal mb3">General Inquiries</h3>
+              <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>
+              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Contact Form</a>
+              <h3 className="ttu f5 normal mt4 mb3">Follow Us for Updates!</h3>
+              <div class="flex">
+              <a href="https://www.facebook.com/hrab.singletaryscholarship" class="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
+              <a href="https://www.instagram.com/hrab.singletary.scholarship/" class="dib pr2"><span className="link f3 white dim fab fa-instagram">&nbsp;</span></a>
+              </div>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">
-              Created with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>
+              Made with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>
             </div>
           </footer>
           <Modal onClose={e => {this.showModal(e)}} show={this.state.show}>
