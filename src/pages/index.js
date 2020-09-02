@@ -1,13 +1,35 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React, { useState } from "react";
+import { Link, graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Button from "../components/button"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Steps from "rsuite/lib/Steps";
+import "rsuite/lib/Steps/styles";
 
 class IndexPage extends React.Component {
+
+  constructor () {
+    super();
+    this.state = {
+      step: 2
+    };
+
+    this.onChange = this.onChange.bind(this);
+    this.onNext = this.onNext.bind(this);
+    this.onPrevious = this.onPrevious.bind(this);
+  }
+
+  onChange(nextStep){
+    this.setState({ step: nextStep < 0 ? 0 : nextStep > 3 ? 3 : nextStep });
+    }
+
+     onNext() { this.onChange(this.state.step + 1)}
+     onPrevious(){ this.onChange(this.state.step - 1)}
+
+  
+
   render() {
-    const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship"
+    const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship";
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -23,6 +45,24 @@ class IndexPage extends React.Component {
           {/* <a href="#" class="link brand-blue-bg white pa3 br3 f5 b dib dim">View Family History</a> */}
           </div>
           </div>
+        </section>
+        <section className="m-card pa6 brand-black-bg flex items-center justify-center black">
+          <div className="m-progress brand-black-bg w-100 mw9 vh-100 pa5">
+            <h2 className="f1 brand-gold">Currently<br/>Fundraising</h2>
+            <div className="white flex justify-between mb5">
+              <p className="f4 w-50 mv4 mr3">Quisque eleifend sapien massa, vitae cursus odio laoreet sed. Proin ultrices leo non eros suscipit, et gravida turpis congue. Aenean a velit dapibus, vestibulum velit nec, pretium nulla. Mauris et luctus massa. Aenean interdum eleifend felis et gravida. Nulla vitae fringilla est. Nulla leo ligula, mollis at neque id, feugiat ultrices leo. Praesent et luctus mauris. Etiam rutrum sollicitudin fringilla.
+              <br/><br/>
+              <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a>
+              </p>
+              <div className="w-40 bg-gray">image placeholder</div>
+            </div>
+            <Steps current={this.state.step}>
+                <Steps.Item title="Research" description="Description" />
+                <Steps.Item title="Establish Endowment Scholarship" description="Description" />
+                <Steps.Item title="Fundraising" description="Description" />
+                <Steps.Item title="First Award" description="Description" />
+              </Steps>
+        </div>
         </section>
         <section className="m-card -card-red pa4 tc flex items-center justify-center white f2">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 

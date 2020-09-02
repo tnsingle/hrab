@@ -4,6 +4,39 @@ html {font-size: 1.0em;}
     background-color: #0D324D;
 }
 
+/* BRANDING */
+.brand-black{
+	color: #0D1321;
+}
+
+.brand-blue{
+	color: #26547C;
+}
+
+.brand-gold{
+	color: #FFD800;
+}
+
+.brand-dark-blue{
+	color: #0D324D;
+}
+
+.brand-blue-bg{
+	background-color: #26547C;
+}
+
+.brand-dark-blue-bg {
+    background-color: #0D324D;
+}
+
+.brand-gold-bg{
+	background-color: #FFD800;
+}
+
+.brand-black-bg{
+	background-color: #0D1321;
+}
+
 .link{
 	box-shadow: none;
 }
@@ -72,23 +105,34 @@ html {font-size: 1.0em;}
 	color: #0D324D;
 }
 
-.brand-black{
-	color: #0D1321;
+.m-progress .rs-steps-item-status-finish .rs-steps-item-tail, 
+.m-progress .rs-steps-item-status-finish .rs-steps-item-title::after {
+    border-color: #FFD800;
 }
 
-.brand-blue{
-	color: #26547C;
+.m-progress .rs-steps-item-status-finish .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
+    border-color: #FFD800;
+    color: #fff;
 }
 
-.brand-dark-blue{
-	color: #0D324D;
+.m-progress .rs-steps-item-status-finish .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) .rs-steps-item-icon::before {
+    color: #fff;
 }
 
-.brand-blue-bg{
-	background-color: #26547C;
+.m-progress .rs-steps-item-content {
+    color: #ccc;
 }
 
-.brand-gold-bg{
-	background-color: #FFD800;
+.m-progress .rs-steps-item-status-process .rs-steps-item-content {
+    color: #FFD800;
 }
 
+.m-progress .rs-steps-item-status-process .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
+    border-color: #FFD800;
+    background: #FFD800;
+    color: #000;
+}
+
+.m-progress .rs-steps-item-status-process .rs-steps-item-title{
+	font-weight: bold;
+}
