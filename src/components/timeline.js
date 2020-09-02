@@ -104,7 +104,7 @@ export default class Timeline extends React.Component {
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
                 <div><img src="https://cdn.singletaryscholarship.fund/images/blondine-cropped-01.jpg" alt="Saundra Singletary in her graduation uniform" /></div>
-                <h3 className="vertical-timeline-element-title lh-copy">Saundra (Singletary) White</h3>
+                <h3 className="vertical-timeline-element-title lh-copy">Dr. Saundra Singletary White</h3>
                 <h4 className="vertical-timeline-element-subtitle brand-gold lh-copy">North Carolina A&T State University<span class="db white f7">formally North Carolina A&T College</span></h4>
                 <p>
                 Saundra, the youngest of the siblings, attended and graduated from NC A&T College and continued her studies to earn the Ed.S and Ed.D from another North Carolina Institution.
