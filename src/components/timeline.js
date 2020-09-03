@@ -35,12 +35,11 @@ export default class Timeline extends React.Component {
                 className="vertical-timeline-element--work"
                 contentStyle={{ backgroundColor: 'transparent', color: '#fff', boxShadow: '0 3px 0 #FFD800' }}
                 contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
-                date="June, 1930"
+                date="June, 1933"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
                 
             >
-                <div><img src="https://cdn.singletaryscholarship.fund/images/house.jpeg" alt="Modern day house" /></div>
-                <h3 className="vertical-timeline-element-title lh-copy">Harrison and Azzie Bell began in Bladenboro, North Carolina, after matrimony in June, 1930</h3>
+                <h3 className="vertical-timeline-element-title lh-copy">Harrison and Azzie Bell began in Bladenboro, North Carolina, after matrimony in June, 1933</h3>
                 <p>
                 Initially Harrison was given one acre of land by his father that housed two small old buildings - one served as the bedroom and the other was used as kitchen. 
                 <br/><br/>The two buildings were connected by a walking board for easy access. Both buildings were heated by wood while kerosene lanterns provided flickering light during night.
