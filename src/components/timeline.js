@@ -78,7 +78,6 @@ export default class Timeline extends React.Component {
                 className="vertical-timeline-element--work"
                 contentStyle={{backgroundColor: '#26547C', color: '#fff'}}
                 contentArrowStyle={{ borderRight: '7px solid  #26547C' }}
-                date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
                 <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/jake-cropped-01.jpg" alt="Portrait of Jake"/></figure>
@@ -92,7 +91,6 @@ export default class Timeline extends React.Component {
                 className="vertical-timeline-element--work"
                 contentStyle={{backgroundColor: '#26547C', color: '#fff'}}
                 contentArrowStyle={{ borderRight: '7px solid  #26547C' }}
-                date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
                 <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/weeyum.jpg" alt="William in front of one of his trucks"/></figure>
@@ -106,7 +104,6 @@ export default class Timeline extends React.Component {
                 className="vertical-timeline-element--work"
                 contentStyle={{backgroundColor: '#26547C', color: '#fff'}}
                 contentArrowStyle={{ borderRight: '7px solid  #26547C' }}
-                date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
                 <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/carl-02.jpg" alt="Carl Singletary in front a plane"/></figure>
@@ -120,7 +117,6 @@ export default class Timeline extends React.Component {
                 className="vertical-timeline-element--work"
                 contentStyle={{backgroundColor: '#26547C', color: '#fff'}}
                 contentArrowStyle={{ borderRight: '7px solid  #26547C' }}
-                date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
                 <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/blondine-cropped-01.jpg" alt="Saundra Singletary in her graduation uniform" /></figure>
