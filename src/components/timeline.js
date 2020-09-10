@@ -51,7 +51,7 @@ export default class Timeline extends React.Component {
                 contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
-                <div><img src="https://cdn.singletaryscholarship.fund/images/harrisoncows-01.jpg" alt="Harrison tending to his cows"/></div>
+                <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/harrisoncows-01.jpg" alt="Harrison tending to his cows"/></figure>
                 <p>
                 Harrison ventured into livestock by raising hogs and cattle for financial and family subsistence. “Bell”, the name he affectionately called her, worked jointly with her husband on the farm while she maintained the home front.
                 </p>
@@ -81,6 +81,7 @@ export default class Timeline extends React.Component {
                 date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
+                <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/jake-cropped-01.jpg" alt="Portrait of Jake"/></figure>
                 <h3 className="vertical-timeline-element-title lh-copy">James Singletary</h3>
                 <h4 className="vertical-timeline-element-subtitle brand-gold lh-copy">North Carolina A&T State University<span class="db white f7">formally A&T College of NC</span></h4>
                 <p>
@@ -94,6 +95,7 @@ export default class Timeline extends React.Component {
                 date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
+                <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/weeyum.jpg" alt="William in front of one of his trucks"/></figure>
                 <h3 className="vertical-timeline-element-title lh-copy">William Singletary</h3>
                 <h4 className="vertical-timeline-element-subtitle brand-gold lh-copy">Armstrong Barber School</h4>
                 <p>
@@ -107,7 +109,7 @@ export default class Timeline extends React.Component {
                 date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
-                <div><img src="https://cdn.singletaryscholarship.fund/images/carl-02.jpg" alt="Carl Singletary in front a plane"/></div>
+                <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/carl-02.jpg" alt="Carl Singletary in front a plane"/></figure>
                 <h3 className="vertical-timeline-element-title lh-copy">Carlentine Singletary</h3>
                 <h4 className="vertical-timeline-element-subtitle brand-gold lh-copy">Teterboro School of Aeronautics</h4>
                 <p>
@@ -121,7 +123,7 @@ export default class Timeline extends React.Component {
                 date="2006 - 2008"
                 iconStyle={{ background: '#FFD800', color: '#fff', boxShadow: 'none' }}
             >
-                <div><img src="https://cdn.singletaryscholarship.fund/images/blondine-cropped-01.jpg" alt="Saundra Singletary in her graduation uniform" /></div>
+                <figure><img className="mb0" src="https://cdn.singletaryscholarship.fund/images/blondine-cropped-01.jpg" alt="Saundra Singletary in her graduation uniform" /></figure>
                 <h3 className="vertical-timeline-element-title lh-copy">Dr. Saundra Singletary White</h3>
                 <h4 className="vertical-timeline-element-subtitle brand-gold lh-copy">North Carolina A&T State University<span class="db white f7">formally North Carolina A&T College</span></h4>
                 <p>
