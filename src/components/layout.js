@@ -115,7 +115,7 @@ class Layout extends React.Component {
           {header}
           <main>{children}</main>
           <footer className="o-footer brand-dark-blue-bg flex flex-column">
-            <div className="o-footer-content mh5 mv6 ph5 bl white">
+            <div className="o-footer-content mh5 mv5 mv6-ns ph5-ns bl-ns white">
               <h2 ref={ this.contactRef } id="contact" className="o-footer-heading ttu normal f2">Contact Us</h2>
               <h3 className="ttu f5 normal mb3">General Inquiries</h3>
               <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>

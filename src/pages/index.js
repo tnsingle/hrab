@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
         />
-        <section className="m-card pa5 flex flex-column flex-row-l items-center justify-center min-vh-100">
+        <section className="m-card pv5 ph4 pa5-n flex flex-column flex-row-l items-center justify-center min-vh-100">
           <h2 className="normal f2 tc tr-l brand-dark-blue w-30-l ttu">From <span className="gray">humble</span> beginnings</h2>
           <div className="m-history__intro bl-l ml4-l pl4-l w-60-l">
           <p className="brand-black lh-copy f4">The Legacy of Faith, Family, Christian ethics, Work ethics, Community and Education began with Harrison R. Singletary, the patriarch of this family.</p>
@@ -58,10 +58,10 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
-        <section className="m-card -max-height-fill -card-red pa4 tc flex items-center justify-center white f2">
+        <section className="m-card -max-height-fill -card-red pa4 tc flex items-center justify-center white f3 f2-ns">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 
           <br/><br/>
-          <span className="brand-black f1 b">“The Legacy Lives On”.</span></p>
+          <span className="brand-black f2 f1-ns b">“The Legacy Lives On”.</span></p>
         </section>
       </Layout>
     )
