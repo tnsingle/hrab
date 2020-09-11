@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
         />
-        <section className="m-card pv5 ph4 pa5-n flex flex-column flex-row-l items-center justify-center min-vh-100">
+        <section className="m-card pv5 ph4 pa5-ns flex flex-column flex-row-l items-center justify-center min-vh-100">
           <h2 className="normal f2 tc tr-l brand-dark-blue w-30-l ttu">From <span className="gray">humble</span> beginnings</h2>
           <div className="m-history__intro bl-l ml4-l pl4-l w-60-l">
           <p className="brand-black lh-copy f4">The Legacy of Faith, Family, Christian ethics, Work ethics, Community and Education began with Harrison R. Singletary, the patriarch of this family.</p>
