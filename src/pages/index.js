@@ -17,6 +17,7 @@ class IndexPage extends React.Component {
     this.closeTimeline = this.closeTimeline.bind(this);
 
     this.timelineRef = React.createRef();
+    this.donate = React.createRef();
   }
   
   showTimeline (e) {
@@ -39,7 +40,7 @@ class IndexPage extends React.Component {
     const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship"
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate }>
         <SEO
           title="Home"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
@@ -58,6 +59,36 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
+        <section id="image-divider-1" className="m-card a-image-divider"></section>
+        <section ref={this.donate} id="donate" className="m-card pv5 ph4 pa5-ns min-vh-100 brand-black-bg white">
+          <h2 className="normal f2 w-30-l ttu tc tl-l">Ways to<span className="db brand-gold b ttu f1">Donate</span></h2>
+          <div className="flex flex-column flex-row-l justify-between tc">
+            <div className="br-l w-50-l mh3 pa4">
+            <span class="db mb3 f-5 fas fa-laptop">&nbsp;</span>
+              <h3 className="f2 brand-gold">Donate Online</h3>
+              <p>Donate online using North Carolina A&T's secure form.<br/>Your gift receipt will be mailed to you.</p>
+              <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
+            onClick={e => {
+              this.showModal(e);
+            }}
+          >Donate Online</a>
+            </div>
+            <div className="w-50-l mh3 pa4">
+            <span class="db mb2 f-5 far fa-envelope">&nbsp;</span>
+              <h3 className="f2 brand-gold">Mail Your Donation</h3>
+              <p>Please make your check payable to: <br/>NC A&T Foundation Inc.<br/><br/>
+              Designation: <br/>Harrison R & Azzie Bell Singletary Endowed Scholarship<br/><br/>
+
+                Kenneth E. Sigmon, Jr. <br/>
+                Vice Chancellor University Advancement<br/>
+                North Carolina A&T State University<br/>
+                Dowdy Administration Building<br/>
+                1601 E. Market Street <br/>
+                Greensboro, NC 27411</p>
+            </div>
+          </div>
+        </section>
+        <section id="image-divider-1" className="m-card a-image-divider"></section>
         <section className="m-card -max-height-fill -card-red pa4 tc flex items-center justify-center white f3 f2-ns">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 
           <br/><br/>

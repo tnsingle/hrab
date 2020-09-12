@@ -39,7 +39,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, donateRef } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
 
@@ -55,9 +55,9 @@ class Layout extends React.Component {
             <a href="/" className="link w-100 w-30-ns dib"><img src="./logo-dark-bg.png" /></a>
             <nav className="o-header__nav flex-grow-1">
               <ul className="list flex f5 ttu ml0 justify-end items-center">
-                <li className="ph2"><a href="#" className="a-nav-link link white dim" onClick={e => {
-              this.showModal(e);
-            }}>Donate</a></li>
+                <li className="ph2"><a href="#donate" onClick={e => {
+              this.scrollToRef(e, donateRef);
+            }} className="a-nav-link link white dim">Ways to Donate</a></li>
                 <li className="ph2"><a href="#contact" onClick={e => {
               this.scrollToRef(e, this.contactRef);
             }} className="a-nav-link link white dim">Contact Us</a></li>
@@ -75,7 +75,9 @@ class Layout extends React.Component {
             onClick={e => {
               this.showModal(e);
             }}
-          >Donate</a>
+          >Donate Online</a><a href="#donate" onClick={e => {
+            this.scrollToRef(e, donateRef);
+          }} className="dib mt2 link white bl pl3 ml3">More Ways to Donate</a>
           </div>
           </div>
         

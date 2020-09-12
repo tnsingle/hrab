@@ -121,4 +121,15 @@ html {font-size: 1.0em;}
 }
 
 
+.a-image-divider {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#image-divider-1{
+	background-image: url(https://cdn.singletaryscholarship.fund/images/bw-01.jpg);
+}
+
 
