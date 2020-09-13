@@ -39,7 +39,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, donateRef } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
 
@@ -51,13 +51,13 @@ class Layout extends React.Component {
       header = ( 
         <header className="o-header -large-header -screen-bg -max-height-fill relative w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
-          <div className="o-header-content__top flex flex-wrap">
-            <a href="/" className="link w-100 w-30-ns dib"><img src="./logo-dark-bg.png" /></a>
+          <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
+            <a href="/" className="link w-100 w-30-l dib"><img src="./logo-dark-bg.png" /></a>
             <nav className="o-header__nav flex-grow-1">
               <ul className="list flex f5 ttu ml0 justify-end items-center">
-                <li className="ph2"><a href="#" className="a-nav-link link white dim" onClick={e => {
-              this.showModal(e);
-            }}>Donate</a></li>
+                <li className="ph2"><a href="#donate" onClick={e => {
+              this.scrollToRef(e, donateRef);
+            }} className="a-nav-link link white dim">Ways to Donate</a></li>
                 <li className="ph2"><a href="#contact" onClick={e => {
               this.scrollToRef(e, this.contactRef);
             }} className="a-nav-link link white dim">Contact Us</a></li>
@@ -67,15 +67,17 @@ class Layout extends React.Component {
             </nav>
           </div>
 
-          <div className="o-header-intro tc tl-l w-50-l mt5-ns ml6-l pl4-l bl-l">
+          <div className="o-header-intro tc tl-l w-50-l mt5-l ml6-l pl4-l bl-l">
           <p className="white f3 lh-copy">The Harrison R. & Azzie Bell Singletary Family Scholarship is an endowment scholarship established in honor of the matriarch and patriarch of this family. The scholarship supports scholars who believe in the family values of Faith, Family, Ethics, Education and Community Service.
         </p>
-          <div className="tc">
+          <div className="tc flex flex-column flex-row-l items-center justify-center">
             <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
             onClick={e => {
               this.showModal(e);
             }}
-          >Donate</a>
+          >Donate Online</a><a href="#donate" onClick={e => {
+            this.scrollToRef(e, donateRef);
+          }} className="dib mt2 link white bl-l pl3-l ml3-l">More Ways to Donate</a>
           </div>
           </div>
         
