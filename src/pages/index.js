@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Timeline from "../components/timeline"
+import ShoutBoard from "../components/shout-board"
 
 class IndexPage extends React.Component {
   constructor () {
@@ -88,6 +89,18 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
+
+        <section className="-max-height-fill flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
+            <div className="o-shout-board w-100 flex flex-column flex-row-l">
+            <div class="o-shout-board__info pb4 pb0-l pr4-l w-20-l w-100">
+              <h2 class="f1 normal">Shout Your Aggie Pride!</h2>
+              <p class="brand-black lh-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo ipsum, gravida id cursus sit amet, sodales id magna. Donec nec velit pulvinar, scelerisque nulla vel, ullamcorper libero.</p>
+              <a href="https://airtable.com/shrwe8HmwfGIbpfwC" target="_blank" className="link brand-dark-blue-bg white ttu pv3 ph4 br3 f5 b dib">Add Yours!</a>
+              </div>
+              <ShoutBoard className="o-shout-board__content w-80-l w-100 flex flex-wrap pa4 justify-center"/>
+            </div>
+        </section>
+
         <section id="image-divider-1" className="m-card a-image-divider"></section>
         <section className="m-card -max-height-fill -card-red pa4 tc flex items-center justify-center white f3 f2-ns">
           <p className="w-50-l">In Honor and Memory of Harrison R and Azzie Bell Singletary, the family establishes this Scholarship Fund. 

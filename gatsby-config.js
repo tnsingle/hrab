@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: `http://singletaryscholarship.fund/`,
@@ -100,5 +104,17 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `${process.env.REACT_APP_AIRTABLE_BASE_ID}`,
+            tableName: `Aggie Pride`
+          }
+        ]
+      }
+    }
   ],
 }

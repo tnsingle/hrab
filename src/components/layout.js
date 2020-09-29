@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 import Modal from '../components/modal'
 
 class Layout extends React.Component {
