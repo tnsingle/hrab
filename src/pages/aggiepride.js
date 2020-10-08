@@ -14,6 +14,7 @@ class ShoutBoardPage extends React.Component {
             <SEO
               title="Aggie Pride Shout Board"
               keywords={[`scholarship`, `education`, `endowment`, `singletary`, "ncat", "aggie", "pride"]}
+              image="https://s3.amazonaws.com/cdn.singletaryscholarship.fund/images/shout_1200.jpg"
             />
             <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
               <ShoutBoardContainer />
