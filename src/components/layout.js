@@ -95,8 +95,8 @@ class Layout extends React.Component {
       header = (
         <header className="o-header brand-dark-blue-bg">
         <div className="o-header-content z-1 relative pa3">
-          <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
-            <a href="/" className="link white dim w-100 w-30-l dib"><span class="fas fa-long-arrow-alt-left dib pr2"></span> Return to the Home Page</a>
+          <div className="o-header-content__top flex items-center">
+            <a href="/" className="link white dim dib"><span class="fas fa-long-arrow-alt-left dib pr2"></span> Return to the Home Page</a>
             <nav className="o-header__nav flex-grow-1">
               <ul className="list flex f5 ttu ma0 justify-end items-center">
                 <li className="ph2 ma0"><AnchorLink to="/#donate" title="Ways to Donate" className="a-nav-link link white dim">Donate</AnchorLink></li>
