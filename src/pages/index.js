@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Timeline from "../components/timeline"
-import ShoutBoard from "../components/shout-board"
+import ShoutBoardContainer from "../components/shout-board-container"
 
 class IndexPage extends React.Component {
   constructor () {
@@ -61,11 +61,11 @@ class IndexPage extends React.Component {
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
         <section id="image-divider-1" className="m-card a-image-divider"></section>
-        <section ref={this.donate} id="donate" className="m-card pv5 ph4 pa5-ns min-vh-100 brand-black-bg white">
+        <section ref={this.donate} id="donate" className="pv5 ph4 pa5-ns min-vh-100 brand-black-bg white">
           <h2 className="normal f2 w-30-l ttu tc tl-l">Ways to<span className="db brand-gold b ttu f1">Donate</span></h2>
           <div className="flex flex-column flex-row-l justify-between tc">
             <div className="br-l w-50-l mh3 pa4">
-            <span class="db mb3 f-5 fas fa-laptop">&nbsp;</span>
+            <span className="db mb3 f-5 fas fa-laptop">&nbsp;</span>
               <h3 className="f2 brand-gold">Donate Online</h3>
               <p>Donate online using North Carolina A&T's secure form.<br/>Your gift receipt will be mailed to you.</p>
               <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
@@ -75,7 +75,7 @@ class IndexPage extends React.Component {
           >Donate Online</a>
             </div>
             <div className="w-50-l mh3 pa4">
-            <span class="db mb2 f-5 far fa-envelope">&nbsp;</span>
+            <span className="db mb2 f-5 far fa-envelope">&nbsp;</span>
               <h3 className="f2 brand-gold">Mail Your Donation</h3>
               <p>Please make your check payable to: <br/>NC A&T Foundation Inc.<br/><br/>
               Designation: <br/>Harrison R & Azzie Bell Singletary Endowed Scholarship<br/><br/>
@@ -90,15 +90,8 @@ class IndexPage extends React.Component {
           </div>
         </section>
 
-        <section className="-max-height-fill flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
-            <div className="o-shout-board w-100 flex flex-column flex-row-l">
-            <div class="o-shout-board__info pb4 pb0-l pr4-l w-20-l w-100">
-              <h2 class="f1 normal">Shout Your Aggie Pride!</h2>
-              <p class="brand-black lh-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo ipsum, gravida id cursus sit amet, sodales id magna. Donec nec velit pulvinar, scelerisque nulla vel, ullamcorper libero.</p>
-              <a href="https://airtable.com/shrwe8HmwfGIbpfwC" target="_blank" className="link brand-dark-blue-bg white ttu pv3 ph4 br3 f5 b dib">Add Yours!</a>
-              </div>
-              <ShoutBoard className="o-shout-board__content w-80-l w-100 flex flex-wrap pa4 justify-center"/>
-            </div>
+        <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
+            <ShoutBoardContainer />
         </section>
 
         <section id="image-divider-1" className="m-card a-image-divider"></section>

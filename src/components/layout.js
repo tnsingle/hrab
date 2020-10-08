@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Modal from '../components/modal'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 class Layout extends React.Component {
   constructor () {
@@ -92,23 +93,22 @@ class Layout extends React.Component {
     } else {
       // smaller header
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <header className="o-header brand-dark-blue-bg">
+        <div className="o-header-content z-1 relative pa3">
+          <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
+            <a href="/" className="link white dim w-100 w-30-l dib"><span class="fas fa-long-arrow-alt-left dib pr2"></span> Return to the Home Page</a>
+            <nav className="o-header__nav flex-grow-1">
+              <ul className="list flex f5 ttu ma0 justify-end items-center">
+                <li className="ph2 ma0"><AnchorLink to="/#donate" title="Ways to Donate" className="a-nav-link link white dim">Donate</AnchorLink></li>
+                <li className="ph2 ma0"><a href="/#contact" onClick={e => {
+              this.scrollToRef(e, this.contactRef);
+            }} className="a-nav-link link white dim">Contact Us</a></li>
+                <li className="ph2 ma0"><a href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
+                <li className="ph2 ma0"><a href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
+              </ul>
+            </nav>
+          </div>
+          </div></header>
       )
     }
     return (
@@ -122,9 +122,9 @@ class Layout extends React.Component {
               <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>
               <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Contact Form</a>
               <h3 className="ttu f5 normal mt4 mb3">Follow Us for Updates!</h3>
-              <div class="flex">
-              <a href="https://www.facebook.com/hrab.singletaryscholarship" class="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
-              <a href="https://www.instagram.com/hrab.singletary.scholarship/" class="dib pr2"><span className="link f3 white dim fab fa-instagram">&nbsp;</span></a>
+              <div className="flex">
+              <a href="https://www.facebook.com/hrab.singletaryscholarship" className="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
+              <a href="https://www.instagram.com/hrab.singletary.scholarship/" className="dib pr2"><span className="link f3 white dim fab fa-instagram">&nbsp;</span></a>
               </div>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">

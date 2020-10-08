@@ -38,6 +38,10 @@ html {font-size: 1.0em;}
 	background-color: #0D1321;
 }
 
+.brand-red-bg{
+	background-color: #D62839;
+}
+
 .inner-shadow{
 	-moz-box-shadow:    inset 0 0 15px #000;
   	-webkit-box-shadow: inset 0 0 15px #000;
@@ -65,7 +69,7 @@ html {font-size: 1.0em;}
 
 }
 
-.o-header {
+.o-header.-large-header {
 	min-height: 900px;
 }
 
