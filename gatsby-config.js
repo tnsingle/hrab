@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const siteAddress = new URL("https://www.singletaryscholarship.fund");
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://singletaryscholarship.fund/`,
@@ -20,7 +22,9 @@ module.exports = {
     {
     resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "hrab",
+        bucketName: "singletaryscholarship.fund",
+        protocol: siteAddress.protocol.slice(0, -1),
+        hostname: siteAddress.hostname,
       },
     },
     {
@@ -113,11 +117,11 @@ module.exports = {
             baseId: `${process.env.REACT_APP_AIRTABLE_BASE_ID}`,
             tableName: `Aggie Pride`,
             defaultValues: {
-              // currently does not accept null / undefined. use empty string instead
-              // and perform your conditional logic on name_of_field.length > 0 ? condition_1 : condition_2
               Degree: "",
               Graduating_Class: "",
               Image: [],
+              Facebook: "",
+              Twitter: "",
               Linkedin: "",
               Instagram: "",
               Business_Name: "",
