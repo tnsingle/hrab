@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 import Modal from '../components/modal'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 class Layout extends React.Component {
   constructor () {
@@ -55,14 +55,14 @@ class Layout extends React.Component {
             <a href="/" className="link w-100 w-30-l dib"><img src="./logo-dark-bg.png" /></a>
             <nav className="o-header__nav flex-grow-1">
               <ul className="list flex f5 ttu ml0 justify-end items-center">
-                <li className="ph2"><a href="#donate" onClick={e => {
+                <li className="ph2"><a href="#donate" title="Ways to Donate" onClick={e => {
               this.scrollToRef(e, donateRef);
             }} className="a-nav-link link white dim">Ways to Donate</a></li>
                 <li className="ph2"><a href="#contact" onClick={e => {
               this.scrollToRef(e, this.contactRef);
             }} className="a-nav-link link white dim">Contact Us</a></li>
-                <li className="ph2"><a href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
-                <li className="ph2"><a href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
+                <li className="ph2"><a href="https://www.facebook.com/hrab.singletaryscholarship" title="Like Us on Facebook" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
+                <li className="ph2"><a href="https://www.instagram.com/hrab.singletary.scholarship/" title="Follow Us on Instagram" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
               </ul>
             </nav>
           </div>
@@ -71,11 +71,11 @@ class Layout extends React.Component {
           <p className="white f3 lh-copy">The Harrison R. & Azzie Bell Singletary Family Scholarship is an endowment scholarship established in honor of the matriarch and patriarch of this family. The scholarship supports scholars who believe in the family values of Faith, Family, Ethics, Education and Community Service.
         </p>
           <div className="tc flex flex-column flex-row-l items-center justify-center">
-            <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
+            <a href="#" title="Donate Online" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
             onClick={e => {
               this.showModal(e);
             }}
-          >Donate Online</a><a href="#donate" onClick={e => {
+          >Donate Online</a><a href="#donate" title="Ways to Donate" onClick={e => {
             this.scrollToRef(e, donateRef);
           }} className="dib mt2 link white bl-l pl3-l ml3-l">More Ways to Donate</a>
           </div>
@@ -93,23 +93,22 @@ class Layout extends React.Component {
     } else {
       // smaller header
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <header className="o-header brand-dark-blue-bg">
+        <div className="o-header-content z-1 relative pa3">
+          <div className="o-header-content__top flex items-center">
+            <a href="/" className="link white dim dib"><span class="fas fa-long-arrow-alt-left dib pr2"></span> Return to the Home Page</a>
+            <nav className="o-header__nav flex-grow-1">
+              <ul className="list flex f5 ttu ma0 justify-end items-center">
+                <li className="ph2 ma0"><AnchorLink to="/#donate" title="Ways to Donate" className="a-nav-link link white dim">Donate</AnchorLink></li>
+                <li className="ph2 ma0"><a href="/#contact" title="Contact Us" onClick={e => {
+              this.scrollToRef(e, this.contactRef);
+            }} className="a-nav-link link white dim">Contact Us</a></li>
+                <li className="ph2 ma0"><a  title="Like Us on Facebook"href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
+                <li className="ph2 ma0"><a  title="Follow Us on Instragram"href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
+              </ul>
+            </nav>
+          </div>
+          </div></header>
       )
     }
     return (
@@ -123,9 +122,9 @@ class Layout extends React.Component {
               <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>
               <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Contact Form</a>
               <h3 className="ttu f5 normal mt4 mb3">Follow Us for Updates!</h3>
-              <div class="flex">
-              <a href="https://www.facebook.com/hrab.singletaryscholarship" class="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
-              <a href="https://www.instagram.com/hrab.singletary.scholarship/" class="dib pr2"><span className="link f3 white dim fab fa-instagram">&nbsp;</span></a>
+              <div className="flex">
+              <a href="https://www.facebook.com/hrab.singletaryscholarship" className="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
+              <a href="https://www.instagram.com/hrab.singletary.scholarship/" className="dib pr2"><span className="link f3 white dim fab fa-instagram">&nbsp;</span></a>
               </div>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">

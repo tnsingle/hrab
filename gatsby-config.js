@@ -1,6 +1,10 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://singletaryscholarship.fund/`,
+    siteUrl: `https://singletaryscholarship.fund/`,
     title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
     author: `Tarise Singletary`,
     description: `Official website of the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
@@ -100,5 +104,28 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `${process.env.REACT_APP_AIRTABLE_BASE_ID}`,
+            tableName: `Aggie Pride`,
+            defaultValues: {
+              // currently does not accept null / undefined. use empty string instead
+              // and perform your conditional logic on name_of_field.length > 0 ? condition_1 : condition_2
+              Degree: "",
+              Graduating_Class: "",
+              Image: [],
+              Linkedin: "",
+              Instagram: "",
+              Business_Name: "",
+              Business_URL: ""
+            },
+          }
+        ]
+      }
+    }
   ],
 }
