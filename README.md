@@ -137,8 +137,10 @@ Project Link: [https://github.com/tnsingle/hrab](https://github.com/tnsingle/hra
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Font Awesome](https://fontawesome.com/)
+* [Coolors](https://coolors.co/) - Color scheme creation
+* [Font Awesome](https://fontawesome.com/) - Icons
 * [React](https://reactjs.org/)
+* [React Vertical Timeline](https://stephane-monnot.github.io/react-vertical-timeline/)
 * [README Template](https://github.com/othneildrew/Best-README-Template)
 
 

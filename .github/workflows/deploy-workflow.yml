@@ -5,6 +5,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: '0 */3 * * *'
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -14,6 +16,14 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
+        - name: Make envfile
+          uses: SpicyPizza/create-envfile@v1
+          with:
+            envkey_DEBUG: false
+            envkey_REACT_APP_AIRTABLE_API_KEY: ${{ secrets.REACT_APP_AIRTABLE_API_KEY }}
+            envkey_REACT_APP_AIRTABLE_BASE_ID: ${{ secrets.REACT_APP_AIRTABLE_BASE_ID }}
+            file_name: .env.production
+       
         - name: Install dependencies
           run: yarn
 

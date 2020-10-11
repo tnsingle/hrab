@@ -1,6 +1,12 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const siteAddress = new URL("https://www.singletaryscholarship.fund");
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://singletaryscholarship.fund/`,
+    siteUrl: `https://singletaryscholarship.fund/`,
     title: `Harrison R. and Azzie Bell Singletary Family Scholarship`,
     author: `Tarise Singletary`,
     description: `Official website of the Harrison R. and Azzie Bell Singletary Family Scholarship for students attending North Carolina A&T State University.`,
@@ -24,7 +30,9 @@ module.exports = {
     {
     resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "hrab",
+        bucketName: "singletaryscholarship.fund",
+        protocol: siteAddress.protocol.slice(0, -1),
+        hostname: siteAddress.hostname,
       },
     },
     {
@@ -74,8 +82,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-180253571-1`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+          siteUrl: siteAddress.href.slice(0, -1),
       },
     },
     {
@@ -108,5 +121,28 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `${process.env.REACT_APP_AIRTABLE_API_KEY}`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `${process.env.REACT_APP_AIRTABLE_BASE_ID}`,
+            tableName: `Aggie Pride`,
+            defaultValues: {
+              Degree: "",
+              Graduating_Class: "",
+              Image: [],
+              Facebook: "",
+              Twitter: "",
+              Linkedin: "",
+              Instagram: "",
+              Business_Name: "",
+              Business_URL: ""
+            },
+          }
+        ]
+      }
+    }
   ],
 }
