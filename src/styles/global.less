@@ -1,3 +1,6 @@
+@black: #0D1321;
+@gold: #FFD800;
+
 html {font-size: 1.0em;}
 
 /* https://github.com/kunukn/react-collapse */
@@ -15,7 +18,7 @@ html {font-size: 1.0em;}
 }
 
 .brand-gold{
-	color: #FFD800;
+	color: @gold;
 }
 
 .brand-dark-blue{
@@ -31,7 +34,7 @@ html {font-size: 1.0em;}
 }
 
 .brand-gold-bg{
-	background-color: #FFD800;
+	background-color: @gold;
 }
 
 .brand-black-bg{
@@ -93,7 +96,7 @@ html {font-size: 1.0em;}
 }
 
 .m-card {
-	min-height: 600px;
+	min-height: 80vh;
 }
 
 
@@ -124,6 +127,38 @@ html {font-size: 1.0em;}
 	color: #0D324D;
 }
 
+
+
+.rs-steps-horizontal .rs-steps-item-title:after {
+    content: "";
+    top: 15px;
+    left: 100%;
+    width: 9999px;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.m-progress-steps__step .rs-steps-item-icon {
+    padding: .5rem;
+    border-radius: 100%;
+    border: 1px solid;
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	color: @gold;
+}
+
+.m-progress-steps__step .rs-steps-item-icon-finish{
+	color: @gold;
+}
+
+.m-progress-steps__step .rs-steps-item-icon-process{
+	background: @gold;
+	color: @black;
+}
+
 .m-progress .rs-steps-item-status-finish .rs-steps-item-tail, 
 .m-progress .rs-steps-item-status-finish .rs-steps-item-title::after {
     border-color: #FFD800;
@@ -139,17 +174,16 @@ html {font-size: 1.0em;}
 }
 
 .m-progress .rs-steps-item-content {
-    color: #ccc;
+	color: #ccc;
+	margin-top: .75rem;
+}
+
+.m-progress-steps__step .rs-steps-item-title{
+	font-weight: bold;
 }
 
 .m-progress .rs-steps-item-status-process .rs-steps-item-content {
     color: #FFD800;
-}
-
-.m-progress .rs-steps-item-status-process .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
-    border-color: #FFD800;
-    background: #FFD800;
-    color: #000;
 }
 
 .m-progress .rs-steps-item-status-process .rs-steps-item-title{
@@ -164,6 +198,10 @@ html {font-size: 1.0em;}
 
 #image-divider-1{
 	background-image: url(https://cdn.singletaryscholarship.fund/images/bw-01.jpg);
+}
+
+#image-divider-2{
+	background-image: url(https://cdn.singletaryscholarship.fund/images/cows.jpg);
 }
 
 .m-privacy {

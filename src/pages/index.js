@@ -73,6 +73,7 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
+        <section id="image-divider-1" className="m-card a-image-divider"></section>
         <section className="m-card pa6 brand-black-bg flex items-center justify-center black">
           <div className="m-progress brand-black-bg w-100 mw9 vh-100 pa5">
           <h2 className="f1 brand-gold">Currently<br/>Fundraising</h2>
@@ -83,15 +84,15 @@ class IndexPage extends React.Component {
           </p>
           <div className="w-40 bg-gray">image placeholder</div>
           </div>
-          <Steps current={this.state.step}>
-          <Steps.Item title="Research" description="Description" />
-          <Steps.Item title="Establish Endowment Scholarship" description="Description" />
-          <Steps.Item title="Fundraising" description="Description" />
-          <Steps.Item title="First Award" description="Description" />
+          <Steps className="m-progress-steps flex" current={this.state.step}>
+          <Steps.Item title="Research" description="Description" className="m-progress-steps__step" />
+          <Steps.Item title="Establish Endowment Scholarship" description="Description" className="m-progress-steps__step"  />
+          <Steps.Item title="Fundraising" description="Description" className="m-progress-steps__step"  />
+          <Steps.Item title="First Award" description="Description" className="m-progress-steps__step"  />
           </Steps>
           </div>
         </section>
-        <section id="image-divider-1" className="m-card a-image-divider"></section>
+        <section id="image-divider-2" className="m-card a-image-divider"></section>
         <section ref={this.donate} id="donate" className="pv5 ph4 pa5-ns min-vh-100 brand-black-bg white">
           <h2 className="normal f2 w-30-l ttu tc tl-l">Ways to<span className="db brand-gold b ttu f1">Donate</span></h2>
           <div className="flex flex-column flex-row-l justify-between tc">
@@ -120,7 +121,7 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-
+        <section id="image-divider-3" className="m-card a-image-divider"></section>
         <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
             <ShoutBoardContainer />
         </section>
