@@ -61,8 +61,8 @@ class Layout extends React.Component {
                 <li className="ph2"><a href="#contact" onClick={e => {
               this.scrollToRef(e, this.contactRef);
             }} className="a-nav-link link white dim">Contact Us</a></li>
-                <li className="ph2"><a href="https://www.facebook.com/hrab.singletaryscholarship" title="Like Us on Facebook" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
-                <li className="ph2"><a href="https://www.instagram.com/hrab.singletary.scholarship/" title="Follow Us on Instagram" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
+                <li className="ph2 dn dib-l"><a href="https://www.facebook.com/hrab.singletaryscholarship" title="Like Us on Facebook" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
+                <li className="ph2 dn dib-l"><a href="https://www.instagram.com/hrab.singletary.scholarship/" title="Follow Us on Instagram" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
               </ul>
             </nav>
           </div>
@@ -103,8 +103,8 @@ class Layout extends React.Component {
                 <li className="ph2 ma0"><a href="/#contact" title="Contact Us" onClick={e => {
               this.scrollToRef(e, this.contactRef);
             }} className="a-nav-link link white dim">Contact Us</a></li>
-                <li className="ph2 ma0"><a  title="Like Us on Facebook"href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
-                <li className="ph2 ma0"><a  title="Follow Us on Instragram"href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
+                <li className="ph2 ma0 dn dib-l"><a  title="Like Us on Facebook"href="https://www.facebook.com/hrab.singletaryscholarship" className="a-nav-link link f3 white dim fab fa-facebook">&nbsp;</a></li>
+                <li className="ph2 ma0 dn dib-l"><a  title="Follow Us on Instragram"href="https://www.instagram.com/hrab.singletary.scholarship/" className="a-nav-link link f3 white dim fab fa-instagram">&nbsp;</a></li>
               </ul>
             </nav>
           </div>
