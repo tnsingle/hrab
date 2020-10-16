@@ -76,19 +76,25 @@ class IndexPage extends React.Component {
         <section id="image-divider-1" className="m-card a-image-divider"></section>
         <section className="m-card pa6 brand-black-bg flex items-center justify-center black">
           <div className="m-progress brand-black-bg w-100 mw9 vh-100 pa5">
-          <h2 className="f1 brand-gold">Currently<br/>Fundraising</h2>
-          <div className="white flex justify-between mb5">
-          <p className="f4 w-50 mv4 mr3">Quisque eleifend sapien massa, vitae cursus odio laoreet sed. Proin ultrices leo non eros suscipit, et gravida turpis congue. Aenean a velit dapibus, vestibulum velit nec, pretium nulla. Mauris et luctus massa. Aenean interdum eleifend felis et gravida. Nulla vitae fringilla est. Nulla leo ligula, mollis at neque id, feugiat ultrices leo. Praesent et luctus mauris. Etiam rutrum sollicitudin fringilla.
+          <div className="white flex flex-column flex-row-l justify-between mb5">
+            <div className="w-50-l mr3">
+            <h2 className="f1 brand-gold mb0">Currently<br/>Fundraising</h2>
+            <p className="f4 mv4">We are currently in the fundraising phase of our scholarship. Quisque eleifend sapien massa, vitae cursus odio laoreet sed. Proin ultrices leo non eros suscipit, et gravida turpis congue. Aenean a velit dapibus, vestibulum velit nec, pretium nulla. Mauris et luctus massa. Aenean interdum eleifend felis et gravida. Nulla vitae fringilla est. Nulla leo ligula, mollis at neque id, feugiat ultrices leo. Praesent et luctus mauris. Etiam rutrum sollicitudin fringilla.
           <br/><br/>
-          <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a>
+          <a href="#" onClick={e => {
+              this.showModal(e);
+            }} 
+            className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a>
           </p>
-          <div className="w-40 bg-gray">image placeholder</div>
+            </div>
+          
+          <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/fundraising-jar.jpg" /></div>
           </div>
-          <Steps className="m-progress-steps flex" current={this.state.step}>
-          <Steps.Item title="Research" description="Description" className="m-progress-steps__step" />
-          <Steps.Item title="Establish Endowment Scholarship" description="Description" className="m-progress-steps__step"  />
-          <Steps.Item title="Fundraising" description="Description" className="m-progress-steps__step"  />
-          <Steps.Item title="First Award" description="Description" className="m-progress-steps__step"  />
+          <Steps className="m-progress-steps dn flex-l" current={this.state.step}>
+          <Steps.Item title="Research" description="Researched many different ways to establish our scholarship fund in memory of many family who've instilled the importance of education within the family and many friends." className="m-progress-steps__step flex" />
+          <Steps.Item title="Establish Endowment Scholarship" description="Established criteria and applied for endowment scholarship with North Carolina A&T State University" className="m-progress-steps__step flex"  />
+          <Steps.Item title="Fundraising" description="Raising funds within 5 year deadline." className="m-progress-steps__step flex"  />
+          <Steps.Item title="1st Award" className="m-progress-steps__step flex"  />
           </Steps>
           </div>
         </section>

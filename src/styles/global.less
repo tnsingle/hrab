@@ -1,5 +1,9 @@
 @black: #0D1321;
+@white: #fff;
+
+@gray: #B3BFB8;
 @gold: #FFD800;
+
 
 html {font-size: 1.0em;}
 
@@ -129,66 +133,86 @@ html {font-size: 1.0em;}
 
 
 
-.rs-steps-horizontal .rs-steps-item-title:after {
-    content: "";
-    top: 15px;
-    left: 100%;
-    width: 9999px;
-    border-top-width: 1px;
-    border-top-style: solid;
+.rs-steps-horizontal .m-progress-steps__step {
+	overflow: hidden;
+	padding-left: .75rem;
+
+	&:first-child{
+		padding-left: 0;
+	}
+
+	.rs-steps-item-icon {
+		padding: .5rem;
+		border-radius: 100%;
+		border: 1px solid;
+		width: 2.75rem;
+		height: 2.75rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: @gold;
+
+		&-finish {
+			color: @gold;
+		}
+
+		&-process {
+			background: @gold;
+			color: @black;
+		}
+
+		&-wait {
+			color: @gray;
+		}
+	}
+
+	.rs-steps-item-content{
+		position: relative;
+		padding: 0 .75rem;
+		max-width: 100%;
+		color: @gray;
+		margin-top: 1.25rem;
+		font-size: .875rem;
+
+		&:before{
+			content: "";
+			display: block;
+			border-top: 1px solid @gray;
+			width: 600px;
+			position: relative;
+
+		}
+	}
+
+	&:last-child .rs-steps-item-content{
+		max-width: none;
+		padding-right: 0;
+		&:before{
+			content: none;
+		}
+	}
+
+	.rs-steps-item-title{
+		font-weight: bold;
+		padding: .5rem 0;
+		text-transform: uppercase;
+	}
+
+	&.rs-steps-item-status{
+		&-finish .rs-steps-item-content {
+			color: @white;
+
+			&:before{
+				border-color: @gold;
+			}
+		}
+
+		&-process .rs-steps-item-content{
+			color: @gold;
+		}
+	}
 }
 
-.m-progress-steps__step .rs-steps-item-icon {
-    padding: .5rem;
-    border-radius: 100%;
-    border: 1px solid;
-    width: 2.75rem;
-    height: 2.75rem;
-    display: flex;
-    align-items: center;
-	justify-content: center;
-	color: @gold;
-}
-
-.m-progress-steps__step .rs-steps-item-icon-finish{
-	color: @gold;
-}
-
-.m-progress-steps__step .rs-steps-item-icon-process{
-	background: @gold;
-	color: @black;
-}
-
-.m-progress .rs-steps-item-status-finish .rs-steps-item-tail, 
-.m-progress .rs-steps-item-status-finish .rs-steps-item-title::after {
-    border-color: #FFD800;
-}
-
-.m-progress .rs-steps-item-status-finish .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
-    border-color: #FFD800;
-    color: #fff;
-}
-
-.m-progress .rs-steps-item-status-finish .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) .rs-steps-item-icon::before {
-    color: #fff;
-}
-
-.m-progress .rs-steps-item-content {
-	color: #ccc;
-	margin-top: .75rem;
-}
-
-.m-progress-steps__step .rs-steps-item-title{
-	font-weight: bold;
-}
-
-.m-progress .rs-steps-item-status-process .rs-steps-item-content {
-    color: #FFD800;
-}
-
-.m-progress .rs-steps-item-status-process .rs-steps-item-title{
-	font-weight: bold;
-}
 .a-image-divider {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -202,6 +226,10 @@ html {font-size: 1.0em;}
 
 #image-divider-2{
 	background-image: url(https://cdn.singletaryscholarship.fund/images/cows.jpg);
+}
+
+#image-divider-3{
+	background-image: url(https://cdn.singletaryscholarship.fund/images/graduate.jpg);
 }
 
 .m-privacy {
