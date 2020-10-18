@@ -5,8 +5,8 @@ import Modal from '../components/modal'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 class Layout extends React.Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       show: false
     };
@@ -26,7 +26,9 @@ class Layout extends React.Component {
   }
   
   closeModal (e) {
+    e.preventDefault();
     this.setState({ show: false });
+    return false;
   }
 
   scrollToRef(e, ref){
@@ -38,10 +40,19 @@ class Layout extends React.Component {
     }
   }
 
+  componentWillUpdate(prevProps, prevState, snapshot) {
+    // Typical usage (don't forget to compare props):
+    if (prevProps.showModal !== this.props.showModal) {
+      this.setState({show: !this.props.showModal});
+    }
+  }
+
   render() {
-    const { location, title, children, donateRef } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
+    const { location, title, children, donateRef, showModal, closeModal} = this.props
+    const rootPath = `${__PATH_PREFIX__}/`;
+    const blogPath = `${__PATH_PREFIX__}/blog/`;
+    const closeModalFunc = showModal ? closeModal : this.closeModal;
+    const isShowModal = this.state.show;
 
     let header
 
@@ -131,11 +142,12 @@ class Layout extends React.Component {
               Made with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>
             </div>
           </footer>
-          <Modal onClose={e => {this.showModal(e)}} show={this.state.show}>
+          <Modal onClose={e => {closeModalFunc(e)}} show={isShowModal}>
                     <h2 className="o-module__title ttu f3 f2-ns brand-blue-bg white pa4 pa5-ns">Thank you for your donation!</h2>
-                    <p className="ph3 ph5-ns gray f4-ns">You will be taken to A&T's donation page in a new tab at:<br/> <a className="brand-blue"
+                    <p className="ph3 ph5-ns dark-gray f4-ns">You will be taken to A&T's donation page in a new tab at:<br/> <a className="brand-blue"
                     href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo" 
                     target="_blank">https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo</a>.</p>
+                    <p className="ph3 ph5-ns dark-gray f4-ns">Please Make Your Campaign Designation to:<br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <p className="ph3 ph5-ns gray f5">Report any questions or issues to <a className="link brand-blue" href="mailto:contact@singletaryscholarship.fund">contact@singletaryscholarship.fund</a>.</p>
                     <a 
                     className="link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3"

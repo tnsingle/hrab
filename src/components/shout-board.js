@@ -45,6 +45,11 @@ export default function ShoutBoard({ className }) {
 
       const hasSocial = fb || twitter || instagram || linkedIn;
 
+      const businessName = content.data.Business_Name;
+      const businessURL = content.data.Business_URL;
+
+      const hasBusiness = businessURL || businessName
+
       const degree = content.data.Degree;
       const year = content.data.Graduating_Class;
       const className = "m-shout__top white pa4 tc f4 flex justify-center items-center brand-" + content.data.Display_Color + "-bg"
@@ -85,6 +90,14 @@ export default function ShoutBoard({ className }) {
                 { instagram ? ( <a href={instagram} className="fab fa-instagram link dib black pr2" target="_blank" rel="noreferrer"></a> ) : "" }
               </div>
             ) : ""}
+
+              {hasBusiness ? (
+                <div className="ph3 pb3 f6 b"><span className="ttu gray f7 db normaml">Business</span>
+                  {businessURL ? (<a href={businessURL}>{businessName ? businessName : businessURL}</a>) : businessName ? businessName : ""}
+                  </div>
+
+              ) : ""}
+            
             
           </div>
         </div>
