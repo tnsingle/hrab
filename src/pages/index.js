@@ -144,7 +144,7 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <section id="image-divider-3" className="m-card a-image-divider"></section>
-        <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
+        <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3 -home-view">
             <ShoutBoardContainer />
         </section>
 
