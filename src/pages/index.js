@@ -104,11 +104,12 @@ class IndexPage extends React.Component {
             <span className="b brand-gold">What does this mean?</span><br/>
             Once our initial goal of $25K is reached the endowment fund would become a $50K endowment.
             <br/><br/>
-              <ul className="mb0">
+              <ul className="mb3">
                 <li>Monies donated will go directly to the scholarship fund established by the family and managed by NC A&T University.</li>
                 <li>Each family, friend, or other person/s that makes a donation will receive a tax deduction receipt from NC A&T.</li>
-                <li>Please help us reach this goal. By doing so you are investing in the future of the youth in our communities.</li>
               </ul>
+              <br/>
+              Please help us reach this goal. By doing so you are investing in the future of the youth in our communities.
           </p>
             </div>
           <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" /></div>
