@@ -91,23 +91,34 @@ class IndexPage extends React.Component {
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
         <section id="image-divider-1" className="m-card a-image-divider"></section>
-        <section className="m-card pa6 brand-black-bg flex items-center justify-center black">
-          <div className="m-progress brand-black-bg w-100 mw9 vh-100 pa5">
-          <div className="white flex flex-column flex-row-l justify-between mb5">
+        <section className="m-card pv5 ph4 pa5-ns brand-black-bg flex items-center justify-center black">
+          <div className="m-progress brand-black-bg w-100 mw9">
+          <h2 className="w-50-l f1 brand-gold mb0">Currently<br/>Fundraising</h2>
+          <div className="white flex flex-column flex-row-l justify-between mb3">
             <div className="w-50-l mr3">
-            <h2 className="f1 brand-gold mb0">Currently<br/>Fundraising</h2>
-            <p className="f4 mv4">We are currently in the fundraising phase of our scholarship. Quisque eleifend sapien massa, vitae cursus odio laoreet sed. Proin ultrices leo non eros suscipit, et gravida turpis congue. Aenean a velit dapibus, vestibulum velit nec, pretium nulla. Mauris et luctus massa. Aenean interdum eleifend felis et gravida. Nulla vitae fringilla est. Nulla leo ligula, mollis at neque id, feugiat ultrices leo. Praesent et luctus mauris. Etiam rutrum sollicitudin fringilla.
-          <br/><br/>
-          <a href="#" onClick={e => {
-              this.showModal(e);
-            }} 
-            className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a>
+            <p className="f4 mv4">
+            Our goal is to raise $<span className="squiggle">25,000</span> to be able to grant our first award.
+            <br/><br/>
+            NC A&T will match the scholarship endowment fund dollar-for-dollar with no maximum (aka 100% match).
+            <br/><br/>
+            <span className="b brand-gold">What does this mean?</span><br/>
+            Once our initial goal of $25K is reached the endowment fund would become a $50K endowment.
+            <br/><br/>
+              <ul className="mb0">
+                <li>Monies donated will go directly to the scholarship fund established by the family and managed by NC A&T University.</li>
+                <li>Each family, friend, or other person/s that makes a donation will receive a tax deduction receipt from NC A&T.</li>
+                <li>Please help us reach this goal. By doing so you are investing in the future of the youth in our communities.</li>
+              </ul>
           </p>
             </div>
+          <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" /></div>
           
-          <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/fundraising-jar.jpg" /></div>
           </div>
-          <Steps className="m-progress-steps dn flex-l" current={this.state.step}>
+          <div className="mb5"><a href="#" onClick={e => {
+              this.showModal(e);
+            }} 
+            className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a></div>
+          <Steps className="m-progress-steps dn flex-l mb5" current={2}>
           <Steps.Item title="Research" description="Researched many different ways to establish our scholarship fund in memory of many family who've instilled the importance of education within the family and many friends." className="m-progress-steps__step flex" />
           <Steps.Item title="Establish Endowment Scholarship" description="Established criteria and applied for endowment scholarship with North Carolina A&T State University" className="m-progress-steps__step flex"  />
           <Steps.Item title="Fundraising" description="Raising funds within 5 year deadline." className="m-progress-steps__step flex"  />

@@ -3,6 +3,8 @@
 
 @gray: #B3BFB8;
 @gold: #FFD800;
+@red: #D62839;
+@blue: #26547C;
 
 
 html {font-size: 1.0em;}
@@ -18,7 +20,7 @@ html {font-size: 1.0em;}
 }
 
 .brand-blue{
-	color: #26547C;
+	color: @blue;
 }
 
 .brand-gold{
@@ -30,7 +32,7 @@ html {font-size: 1.0em;}
 }
 
 .brand-blue-bg{
-	background-color: #26547C;
+	background-color: @blue;
 }
 
 .brand-dark-blue-bg {
@@ -53,6 +55,15 @@ html {font-size: 1.0em;}
 	-moz-box-shadow:    inset 0 0 15px #000;
   	-webkit-box-shadow: inset 0 0 15px #000;
 	box-shadow: 		inset 0 0 15px #000;
+}
+
+.squiggle {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .8s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23FFD800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 4px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  padding-bottom: 3px;
 }
 
 .link{
@@ -105,7 +116,7 @@ html {font-size: 1.0em;}
 
 
 .-card-red{
-	background-color: #D62839;
+	background-color: @red;
 }
 
 .m-history__intro{
