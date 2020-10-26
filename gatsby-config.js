@@ -20,6 +20,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
+      resolve: `gatsby-plugin-less`,
+      options: {
+          lessOptions: {
+              javascriptEnabled: true,
+          }
+      }
+  },
+    {
     resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: "singletaryscholarship.fund",
