@@ -1,11 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React, { useState } from "react";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Timeline from "../components/timeline"
 import ShoutBoardContainer from "../components/shout-board-container"
+import Steps from "rsuite/lib/Steps";
 
 class IndexPage extends React.Component {
   constructor () {
@@ -41,6 +42,13 @@ class IndexPage extends React.Component {
     });
     return false;
   }
+    
+    onChange(nextStep){
+        this.setState({ step: nextStep < 0 ? 0 : nextStep > 3 ? 3 : nextStep });
+    }
+    
+    onNext() { this.onChange(this.state.step + 1)}
+    onPrevious(){ this.onChange(this.state.step - 1)}
   
   showTimeline (e) {
     e.preventDefault();
@@ -59,13 +67,14 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship"
+    const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship";
 
     return (
       <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
         <SEO
           title="Home"
-          keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
+          lang="en"
+          keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`]}
         />
         <section className="m-card pv5 ph4 pa5-ns flex flex-column flex-row-l items-center justify-center min-vh-100">
           <h2 className="normal f2 tc tr-l brand-dark-blue w-30-l ttu">From <span className="gray">humble</span> beginnings</h2>
@@ -82,6 +91,42 @@ class IndexPage extends React.Component {
         </section>
         <Timeline ref={ this.timelineRef } onClose={e => {this.showTimeline(e)}} show={this.state.show} parentClassName="m-card brand-black-bg pa5 inner-shadow" />
         <section id="image-divider-1" className="m-card a-image-divider"></section>
+        <section className="m-card pv5 ph4 pa5-ns brand-black-bg flex items-center justify-center black">
+          <div className="m-progress brand-black-bg w-100 mw9">
+          <h2 className="w-50-l f1 brand-gold mb0">Currently<br/>Fundraising</h2>
+          <div className="white flex flex-column flex-row-l justify-between mb3">
+            <div className="w-50-l mr3">
+            <p className="f4 mv4">
+            Our goal is to raise $<span className="squiggle">25,000</span> to be able to grant our first award.
+            <br/><br/>
+            NC A&T will match the scholarship endowment fund dollar-for-dollar with no maximum (aka 100% match).
+            <br/><br/>
+            <span className="b brand-gold">What does this mean?</span><br/>
+            Once our initial goal of $25K is reached the endowment fund would become a $50K endowment.
+            <br/><br/>
+              <ul className="mb0">
+                <li>Monies donated will go directly to the scholarship fund established by the family and managed by NC A&T University.</li>
+                <li>Each family, friend, or other person/s that makes a donation will receive a tax deduction receipt from NC A&T.</li>
+                <li>Please help us reach this goal. By doing so you are investing in the future of the youth in our communities.</li>
+              </ul>
+          </p>
+            </div>
+          <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" /></div>
+          
+          </div>
+          <div className="mb5"><a href="#" onClick={e => {
+              this.showModal(e);
+            }} 
+            className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib">Donate</a></div>
+          <Steps className="m-progress-steps dn flex-l mb5" current={2}>
+          <Steps.Item title="Research" description="Researched many different ways to establish our scholarship fund in memory of many family who've instilled the importance of education within the family and many friends." className="m-progress-steps__step flex" />
+          <Steps.Item title="Establish Endowment Scholarship" description="Established criteria and applied for endowment scholarship with North Carolina A&T State University" className="m-progress-steps__step flex"  />
+          <Steps.Item title="Fundraising" description="Raising funds within 5 year deadline." className="m-progress-steps__step flex"  />
+          <Steps.Item title="1st Award" className="m-progress-steps__step flex"  />
+          </Steps>
+          </div>
+        </section>
+        <section id="image-divider-2" className="m-card a-image-divider"></section>
         <section ref={this.donate} id="donate" className="pv5 ph4 pa5-ns min-vh-100 brand-black-bg white">
           <h2 className="normal f2 w-30-l ttu tc tl-l">Ways to<span className="db brand-gold b ttu f1">Donate</span></h2>
           <div className="flex flex-column flex-row-l justify-between tc">
@@ -110,8 +155,8 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-
-        <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3">
+        <section id="image-divider-3" className="m-card a-image-divider"></section>
+        <section className="flex min-vh-100 shadow-4 brand-gold-bg pa5-l pa3 -home-view">
             <ShoutBoardContainer />
         </section>
 
