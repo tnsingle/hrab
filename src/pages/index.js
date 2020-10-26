@@ -13,7 +13,7 @@ class IndexPage extends React.Component {
     super();
     this.state = {
       show: false,
-    step: 2
+      showModal: false
     };
     
     this.showTimeline = this.showTimeline.bind(this);
@@ -21,10 +21,26 @@ class IndexPage extends React.Component {
 
     this.timelineRef = React.createRef();
     this.donate = React.createRef();
-      
-      this.onChange = this.onChange.bind(this);
-      this.onNext = this.onNext.bind(this);
-      this.onPrevious = this.onPrevious.bind(this);
+
+    this.showModal = this.showModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  showModal (e) {
+    e.preventDefault();
+    this.setState({
+      showModal: !this.state.showModal
+    });
+    return false;
+  }
+
+  closeModal (e) {
+    e.preventDefault();
+    console.log("here")
+    this.setState({
+      showModal: false
+    });
+    return false;
   }
     
     onChange(nextStep){
@@ -54,7 +70,7 @@ class IndexPage extends React.Component {
     const siteTitle = "Harrison R. and Azzie Bell Singletary Family Scholarship";
 
     return (
-      <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate }>
+      <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
         <SEO
           title="Home"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`]}

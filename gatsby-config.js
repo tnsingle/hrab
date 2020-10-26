@@ -131,7 +131,7 @@ module.exports = {
             tableName: `Aggie Pride`,
             defaultValues: {
               Degree: "",
-              Graduating_Class: "",
+              Graduating_Class: 0,
               Image: [],
               Facebook: "",
               Twitter: "",
