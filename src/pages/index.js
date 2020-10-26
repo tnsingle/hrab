@@ -73,7 +73,8 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
         <SEO
           title="Home"
-          keywords={[`scholarship`, `education`, `endowment`, `singletary`]}
+          lang="en"
+          keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`]}
         />
         <section className="m-card pv5 ph4 pa5-ns flex flex-column flex-row-l items-center justify-center min-vh-100">
           <h2 className="normal f2 tc tr-l brand-dark-blue w-30-l ttu">From <span className="gray">humble</span> beginnings</h2>
