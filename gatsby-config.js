@@ -80,9 +80,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: `UA-180253571-1`,
+        id: `GTM-M6BD4H8`,
+        includeInDevelopment: true,
       },
     },
     {
