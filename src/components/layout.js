@@ -82,7 +82,7 @@ class Layout extends React.Component {
           <p className="white f3 lh-copy">The Harrison R. & Azzie Bell Singletary Family Scholarship is an endowment scholarship established in honor of the matriarch and patriarch of this family. The scholarship supports scholars who believe in the family values of Faith, Family, Ethics, Education and Community Service.
         </p>
           <div className="tc flex flex-column flex-row-l items-center justify-center">
-            <a href="#" title="Donate Online" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
+            <a href="#" title="Donate Online" className="a-donate gtm-donate-online link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
             onClick={e => {
               this.showModal(e);
             }}
@@ -150,7 +150,7 @@ class Layout extends React.Component {
                     <p className="ph3 ph5-ns dark-gray f4-ns">Please Make Your Campaign Designation to:<br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <p className="ph3 ph5-ns gray f5">Report any questions or issues to <a className="link brand-blue" href="mailto:contact@singletaryscholarship.fund">contact@singletaryscholarship.fund</a>.</p>
                     <a 
-                    className="link brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3"
+                    className="link gtm-donate-external brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3"
                     href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo"
                     target="_blank">Continue</a>
           </Modal>
