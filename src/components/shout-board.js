@@ -81,13 +81,13 @@ export default function ShoutBoard({ className }) {
             {hasSocial ? (
                 <div className="m-shout__social ph3 pb3">
 
-                {fb ? ( <a href={fb} className="fab fa-facebook link dib black pr2" target="_blank" rel="noreferrer"></a> ) : "" } 
+                {fb ? ( <a href={fb} className="fab fa-facebook link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Facebook</span></a> ) : "" } 
 
-                {twitter ? ( <a href={twitter} className="fab fa-twitter link dib black pr2" target="_blank" rel="noreferrer">&nbsp;</a> ) : "" }
+                {twitter ? ( <a href={twitter} className="fab fa-twitter link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Twitter</span></a> ) : "" }
                 
-                { linkedIn ? ( <a href={linkedIn} className="fab fa-linkedin link dib black pr2" target="_blank" rel="noreferrer"></a> ) : "" }
+                { linkedIn ? ( <a href={linkedIn} className="fab fa-linkedin link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Connect with {name} on LinkedIn</span></a> ) : "" }
 
-                { instagram ? ( <a href={instagram} className="fab fa-instagram link dib black pr2" target="_blank" rel="noreferrer"></a> ) : "" }
+                { instagram ? ( <a href={instagram} className="fab fa-instagram link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Instagram</span></a> ) : "" }
               </div>
             ) : ""}
 
