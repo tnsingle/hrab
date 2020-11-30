@@ -109,7 +109,7 @@ class IndexPage extends React.Component {
                 <li>Each family, friend, or other person/s that makes a donation will receive a tax deduction receipt from NC A&T.</li>
               </ul>
               <br/>
-              Please help us reach this goal. By doing so you are investing in the future of the youth in our communities.
+              Please help us reach this goal. By doing so you are investing in the <span className="brand-gold">future of the youth in our communities</span>.
           </p>
             </div>
           <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" /></div>
@@ -134,7 +134,7 @@ class IndexPage extends React.Component {
             <div className="br-l w-50-l mh3 pa4">
             <span className="db mb3 f-5 fas fa-laptop">&nbsp;</span>
               <h3 className="f2 brand-gold">Donate Online</h3>
-              <p>Donate online using North Carolina A&T's secure form.<br/>Your gift receipt will be mailed to you.</p>
+              <p class="f4">Donate online using North Carolina A&T's secure form.<br/>Your gift receipt will be mailed to you.</p>
               <a href="#" className="a-donate link brand-gold-bg black ttu pv3 ph4 br3 f5 b dib" 
             onClick={e => {
               this.showModal(e);
@@ -144,8 +144,10 @@ class IndexPage extends React.Component {
             <div className="w-50-l mh3 pa4">
             <span className="db mb2 f-5 far fa-envelope">&nbsp;</span>
               <h3 className="f2 brand-gold">Mail Your Donation</h3>
-              <p>Please make your check payable to: <br/>NC A&T Foundation Inc.<br/><br/>
-              Designation: <br/>Harrison R & Azzie Bell Singletary Endowed Scholarship<br/><br/>
+              <p className="f4">Please make your check payable to: <br/>NC A&T Foundation Inc.</p>
+              <a href="https://cdn.singletaryscholarship.fund/forms/ncat-gift-form.pdf" target="_blank" 
+              className="a-donate-pdf link brand-gold-bg black ttu pv3 ph4 mb3 br3 f5 b dib">Download PDF Form</a>
+              <p className="f4">Designation: <br/>Harrison R & Azzie Bell Singletary Endowed Scholarship<br/><br/>
 
                 Kenneth E. Sigmon, Jr. <br/>
                 Vice Chancellor University Advancement<br/>
