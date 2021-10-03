@@ -145,13 +145,14 @@ class Layout extends React.Component {
           <Modal onClose={e => {closeModalFunc(e)}} show={isShowModal}>
                     <h2 className="o-module__title ttu f3 f2-ns brand-blue-bg white pa4 pa5-ns">Thank you for your donation!</h2>
                     <p className="ph3 ph5-ns dark-gray f4-ns">You will be taken to A&T's donation page in a new tab at:<br/> <a className="brand-blue"
-                    href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo" 
-                    target="_blank">https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo</a>.</p>
+                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
+                    target="_blank">https://app.mobilecause.com/form/Rrgoyw?vid=lf43q</a>.</p>
                     <p className="ph3 ph5-ns dark-gray f4-ns">Please Make Your Campaign Designation to:<br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <p className="ph3 ph5-ns gray f5">Report any questions or issues to <a className="link brand-blue" href="mailto:contact@singletaryscholarship.fund">contact@singletaryscholarship.fund</a>.</p>
                     <a 
                     className="link gtm-donate-external brand-blue-bg white ttu pv3 ph4 br3 f5 b dib mb3"
-                    href="https://ssbprod-ncat.uncecs.edu/pls/NCATPROD/bwzkadcd.P_DispPersInfo"
+                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
+                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
                     target="_blank">Continue</a>
           </Modal>
         </Wrapper>

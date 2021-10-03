@@ -36,7 +36,6 @@ class IndexPage extends React.Component {
 
   closeModal (e) {
     e.preventDefault();
-    console.log("here")
     this.setState({
       showModal: false
     });
