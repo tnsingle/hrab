@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
           <div className="mt3 tc">
           <a href="#" title="View Family History" onClick={e => {
               this.showTimeline(e);
-            }} className="link brand-blue-bg white pa3 br3 f5 b dib dim">View Family History</a>
+            }} className="link brand-red-bg white pa3 br3 f5 b dib dim"><i class="dib pr2 fas fa-expand-alt"></i>View Family Timeline</a>
           </div>
           </div>
         </section>

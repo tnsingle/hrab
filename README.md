@@ -128,7 +128,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Nicole Singletary - [@inspiredbynikki](https://twitter.com/inspiredbynikki) - nikki@singletaryscholarship.fund
+Nicole Singletary - [@heynikkidotdev](https://twitter.com/heynikkidotdev) - nikki@singletaryscholarship.fund
 
 Project Link: [https://github.com/tnsingle/hrab](https://github.com/tnsingle/hrab)
 

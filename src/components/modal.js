@@ -11,7 +11,7 @@ export default class Modal extends React.Component {
     }
     return (
       <div style={{
-        backgroundColor: `rgba(255, 255, 255, 0.75)`
+        backgroundColor: `rgba(0, 0, 0, 0.75)`
       }}
       className="o-modal__overlay fixed top-0 bottom-0 left-0 right-0 w-100 height-100 z-999">
 
