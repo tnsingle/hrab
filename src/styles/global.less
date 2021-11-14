@@ -1,18 +1,18 @@
-@black: #0D1321;
-@white: #fff;
+@import url(variables.less);
 
-@gray: #B3BFB8;
-@gold: #FFD800;
-@red: #D62839;
-@blue: #26547C;
+html {
+	font-size: 1.0em;
+	background-color: @darkBlue;
+}
 
-
-html {font-size: 1.0em;}
+button {
+	border: 0 none;
+}
 
 /* https://github.com/kunukn/react-collapse */
 .collapse-css-transition {
     transition: height 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
   /* BRANDING */
 .brand-black{
@@ -36,7 +36,7 @@ html {font-size: 1.0em;}
 }
 
 .brand-dark-blue-bg {
-    background-color: #0D324D;
+    background-color: @darkBlue;
 }
 
 .brand-gold-bg{
