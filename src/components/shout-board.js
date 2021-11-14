@@ -52,7 +52,8 @@ export default function ShoutBoard({ className }) {
 
       const degree = content.data.Degree;
       const year = content.data.Graduating_Class;
-      const className = "m-shout__top white pa4 tc f4 flex justify-center items-center brand-" + content.data.Display_Color + "-bg"
+      const displayColor = content.data.Display_Color ? content.data.Display_Color : "blue"
+      const className = "m-shout__top white pa4 tc f4 flex justify-center items-center brand-" + displayColor + "-bg"
 
       return(
         <div className="m-shout bg-white br3 overflow-hidden shadow-4 ma2" key={index}>
