@@ -193,13 +193,13 @@ class Layout extends React.Component {
           </div>
           <Modal onClose={e => {closeModalFunc(e)}} show={isShowModal}>
             <div className="o-module__top">
-                    <h2 className="o-module__title f3 f2-ns brand-dark-blue-bg white pa4 pa5-ns">We appreciate your donation</h2>
+                    <h2 className="o-module__title f3 f2-ns brand-dark-blue-bg white pa4 pa5-ns">We appreciate your donation<i class="brand-gold pl2 far fa-heart"></i></h2>
             </div>
                     
                     <p className="ph3 ph5-ns dark-gray f4-ns">You will be taken to North Carolina A&T's donation page:<br/> <a className="brand-blue"
                     href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
                     target="_blank">https://app.mobilecause.com/form/Rrgoyw?vid=lf43q</a>.</p>
-                    <p className="ph3 ph5-ns dark-gray f4-ns">Please Make Your Campaign Designation to:<br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
+                    <p className="ph3 ph5-ns dark-gray f4-ns">Choose "Other" from the dropdown<br/>Then make your campaign designation to:<br/><br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <a 
                     className="link gtm-donate-external brand-gold-bg black ttu pv3 ph4 br3 f5 b dib mb3"
                     href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
