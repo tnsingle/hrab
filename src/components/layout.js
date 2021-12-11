@@ -157,7 +157,7 @@ class Layout extends React.Component {
       header = (
         <header className="o-header brand-dark-blue-bg">
         <div className="o-header-content z-1 relative pa3 flex justify-between">
-          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><img className="ma0 h3" src="./logo-dark-bg.png" /></a>
+          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><img className="ma0 h3" src="/logo-dark-bg.png" /></a>
           <button title="Donate Now" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
             onClick={e => {
               this.showModal(e);
