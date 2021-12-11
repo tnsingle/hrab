@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function ShoutBoard({ className }) {
 
@@ -9,11 +10,13 @@ export default function ShoutBoard({ className }) {
         data {
           Date
           Image {
-            thumbnails {
-              large {
-                height
-                url
-                width
+            localFiles {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 75
+                  transformOptions: { fit: CONTAIN }
+                  backgroundColor: "transparent"
+                )
               }
             }
           }
@@ -36,7 +39,7 @@ export default function ShoutBoard({ className }) {
     data.cards.nodes.map((content, index) => {
       const quote = content.data.Statement;
       const name = content.data.Name;
-      const image = content.data.Image.length > 0 ? content.data.Image[0].thumbnails.large : "";
+      const image = content.data?.Image?.localFiles[0]?.childImageSharp?.gatsbyImageData;
 
       const fb = "";
       const twitter = content.data.Twitter;
@@ -61,7 +64,7 @@ export default function ShoutBoard({ className }) {
           <div className="m-shout__bottom flex flex-column justify-between">
             <div className="m-shout__bio flex pa3">
               { image ? (<div className="m-shout__img-wrapper overflow-hidden">
-                <img className="w-100 ma0 db" src={image.url} width={image.width} />
+                <GatsbyImage image={image} />
               </div>) : ""}
               
               <div className="m-shout__desc f6 pl2">

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 import Timeline from "../components/timeline"
 import ShoutBoardContainer from "../components/shout-board-container"
 import Steps from "rsuite/lib/Steps";
+import { StaticImage } from "gatsby-plugin-image"
 
 class IndexPage extends React.Component {
   constructor () {
@@ -71,9 +70,9 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
         <SEO
-          title="Home"
+          title="Be the change."
           lang="en"
-          keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`, `giving tuesday`]}
+          keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`, `giving tuesday`, `aggie pride`, `aggie born, aggie bred`, `ncat`, `black history`]}
         />
         <section className="m-card pv5 ph4 pa5-ns flex flex-column flex-row-l items-center justify-center min-vh-100">
           <h2 className="normal f2 tc tr-l brand-dark-blue w-30-l ttu">From <span className="gray">humble</span> beginnings</h2>
@@ -111,7 +110,7 @@ class IndexPage extends React.Component {
               Please help us reach this goal. By doing so you are investing in the <span className="brand-gold">future of the youth in our communities</span>.
           </p>
             </div>
-          <div className="w-40-l"><img src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" /></div>
+          <div className="w-40-l"><StaticImage src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" alt="A spilled jar of coins with the word 'Donate' written on a piece of paper"/></div>
           
           </div>
           <div className="mb5"><a href="#" onClick={e => {

@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Modal from '../components/modal'
 import Navigation from '../components/navigation'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { StaticImage } from "gatsby-plugin-image"
 
 class Layout extends React.Component {
   constructor (props) {
@@ -126,7 +125,7 @@ class Layout extends React.Component {
         <header className="o-header -large-header relative -screen-bg -max-height-fill w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
           <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
-            <a href="/" className="link w-100 w-30-l dib"><img src="./logo-dark-bg.png" /></a>
+            <a href="/" className="link w-100 w-30-l dib"><StaticImage src="../../static/logo-dark-bg.png" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" /></a>
           </div>
 
           <div className="o-header-intro tc tl-l w-50-l mt5-l ml6-l pl4-l bl-l">
@@ -157,12 +156,12 @@ class Layout extends React.Component {
       header = (
         <header className="o-header brand-dark-blue-bg">
         <div className="o-header-content z-1 relative pa3 flex justify-between">
-          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><img className="ma0 h3" src="/logo-dark-bg.png" /></a>
-          <button title="Donate Now" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
+          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><StaticImage className="ma0 h3" src="../../static/logo-dark-bg.png" height="64" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" /></a>
+          <button title="Donate Today" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
             onClick={e => {
               this.showModal(e);
             }}
-          >Donate Now</button>
+          >Donate Today</button>
           </div>
           
           </header>
