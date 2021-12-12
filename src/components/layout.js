@@ -124,7 +124,9 @@ class Layout extends React.Component {
         <header className="o-header -large-header relative -screen-bg -max-height-fill w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
           <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
-            <a href="/" className="link w-100 w-30-l dib"><StaticImage src="../images/logo-dark-bg.png" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" width="500" loading="eager" /></a>
+            <a href="/" className="link w-100 w-30-l dib">
+              <StaticImage src="../images/logo-dark-bg.png" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" width="500" loading="eager" />
+            </a>
           </div>
 
           <div className="o-header-intro tc tl-l w-50-l mt5-l ml6-l pl4-l bl-l">
@@ -155,7 +157,9 @@ class Layout extends React.Component {
       header = (
         <header className="o-header brand-dark-blue-bg">
         <div className="o-header-content z-1 relative pa3 flex justify-between">
-          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><StaticImage className="ma0 h3" src="../images/logo-dark-bg.png" height="64" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" loading="eager" /></a>
+          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1">
+            <StaticImage imgClassName="ma0" src="../images/logo-dark-bg.png" height="64" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" loading="eager" />
+          </a>
           <button title="Donate Today" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
             onClick={e => {
               this.showModal(e);
