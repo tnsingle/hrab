@@ -7,7 +7,6 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      NODE_ENV: development
     steps:
         - uses: actions/checkout@v2
 
@@ -17,7 +16,7 @@ jobs:
             envkey_DEBUG: false
             envkey_REACT_APP_AIRTABLE_API_KEY: ${{ secrets.REACT_APP_AIRTABLE_API_KEY }}
             envkey_REACT_APP_AIRTABLE_BASE_ID: ${{ secrets.REACT_APP_AIRTABLE_BASE_ID }}
-            file_name: .env.development
+            file_name: .env.production
 
         - name: Setup Nodejs and npm
           uses: actions/setup-node@v2
