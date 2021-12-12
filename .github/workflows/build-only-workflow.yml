@@ -29,5 +29,8 @@ jobs:
         - name: Install dependencies
           run: yarn install
 
+        - name: Clean
+          run: yarn clean
+
         - name: Build
-          run: yarn cache clean && yarn build
+          run: yarn build
