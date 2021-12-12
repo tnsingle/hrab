@@ -13,12 +13,12 @@ module.exports = {
     image: `https://hrab-assets-temp.s3.amazonaws.com/hrab-logo-open-graph-08.png`
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     {
       resolve: `gatsby-plugin-less`,
       options: {
@@ -38,15 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     {
@@ -130,10 +123,10 @@ module.exports = {
           {
             baseId: `${process.env.REACT_APP_AIRTABLE_BASE_ID}`,
             tableName: `Aggie Pride`,
+            mapping: { Image: `fileNode` },
             defaultValues: {
               Degree: "",
               Graduating_Class: 0,
-              Image: [],
               Facebook: "",
               Twitter: "",
               Linkedin: "",

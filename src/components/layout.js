@@ -1,9 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Modal from '../components/modal'
 import Navigation from '../components/navigation'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { StaticImage } from "gatsby-plugin-image"
 
 class Layout extends React.Component {
   constructor (props) {
@@ -65,9 +64,8 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { location, title, children, donateRef, showModal, closeModal} = this.props
+    const { location, children, donateRef, showModal, closeModal} = this.props
     const rootPath = `${__PATH_PREFIX__}/`;
-    const blogPath = `${__PATH_PREFIX__}/blog/`;
     const closeModalFunc = showModal ? closeModal : this.closeModal;
     const isShowModal = this.state.show;
     const that = this;
@@ -126,7 +124,7 @@ class Layout extends React.Component {
         <header className="o-header -large-header relative -screen-bg -max-height-fill w-100 vh-100 overflow-hidden">
         <div className="o-header-content pa5 z-1 relative o-90">
           <div className="o-header-content__top flex flex-wrap flex-column flex-row-l">
-            <a href="/" className="link w-100 w-30-l dib"><img src="./logo-dark-bg.png" /></a>
+            <a href="/" className="link w-100 w-30-l dib"><StaticImage src="../images/logo-dark-bg.png" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" width="500" loading="eager" /></a>
           </div>
 
           <div className="o-header-intro tc tl-l w-50-l mt5-l ml6-l pl4-l bl-l">
@@ -157,12 +155,12 @@ class Layout extends React.Component {
       header = (
         <header className="o-header brand-dark-blue-bg">
         <div className="o-header-content z-1 relative pa3 flex justify-between">
-          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><img className="ma0 h3" src="./logo-dark-bg.png" /></a>
-          <button title="Donate Now" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
+          <a href="/" className="link w-100 w-auto-l dib ml4 pl4 pt1"><StaticImage className="ma0 h3" src="../images/logo-dark-bg.png" height="64" alt="A logo that says 'Harrison R. & Azzie Bell Singletary Family Scholarship'" loading="eager" /></a>
+          <button title="Donate Today" className="a-donate gtm-donate-online link pa3 brand-gold ba br3 f5 dn dib-l bg-transparent" 
             onClick={e => {
               this.showModal(e);
             }}
-          >Donate Now</button>
+          >Donate Today</button>
           </div>
           
           </header>
@@ -179,7 +177,7 @@ class Layout extends React.Component {
               <h2 ref={ this.contactRef } id="contact" className="o-footer-heading ttu normal f2">Contact Us</h2>
               <h3 className="ttu f5 normal mb3">General Inquiries</h3>
               <p className="lh-solid f5"><span className="b">email:</span> contact@singletaryscholarship.fund</p>
-              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank">Contact Form</a>
+              <a className="typeform-share link brand-blue-bg white ttu pv3 ph4 br3 f5 dib mb3 dim" href="https://tnsingle.typeform.com/to/B4ZZDK44" target="_blank" rel="noreferrer" >Contact Form</a>
               <h3 className="ttu f5 normal mt4 mb3">Follow Us for Updates!</h3>
               <div className="flex">
               <a href="https://www.facebook.com/hrab.singletaryscholarship" className="dib pr2"><span className="link f3 white dim fab fa-facebook">&nbsp;</span></a>
@@ -187,7 +185,7 @@ class Layout extends React.Component {
               </div>
             </div>
             <div className="o-footer-bottom white bg-near-black pa3 f6 tc">
-              Made with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank">Nikki Singletary</a>
+              Made with <i className="fas fa-heart">&nbsp;</i>by <a href="https://www.nikki-singletary.com" className="link white dim" target="_blank" rel="noreferrer" >Nikki Singletary</a>
             </div>
           </footer>
           </div>
@@ -198,13 +196,12 @@ class Layout extends React.Component {
                     
                     <p className="ph3 ph5-ns dark-gray f4-ns">You will be taken to North Carolina A&T's donation page:<br/> <a className="brand-blue"
                     href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
-                    target="_blank">https://app.mobilecause.com/form/Rrgoyw?vid=lf43q</a>.</p>
+                    target="_blank" rel="noreferrer" >https://app.mobilecause.com/form/Rrgoyw?vid=lf43q</a>.</p>
                     <p className="ph3 ph5-ns dark-gray f4-ns">Choose "Other" from the dropdown<br/>Then make your campaign designation to:<br/><br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <a 
                     className="link gtm-donate-external brand-gold-bg black ttu pv3 ph4 br3 f5 b dib mb3"
                     href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
-                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
-                    target="_blank">Continue</a>
+                    target="_blank" rel="noreferrer" >Continue</a>
                     <p className="ph3 ph5-ns gray f5">Report any questions or issues to <a className="link brand-blue" href="mailto:contact@singletaryscholarship.fund">contact@singletaryscholarship.fund</a>.</p>
           
           </Modal>

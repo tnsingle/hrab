@@ -1,10 +1,6 @@
 
-name: singletaryscholarship.fund for S3 Deploy
-on:
-  push:
-    branches: [ master ]
-  schedule:
-    - cron: '0 */3 * * *'
+name: singletaryscholarship.fund Build PR
+on: pull_request
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -38,13 +34,3 @@ jobs:
 
         - name: Build
           run: yarn build
-
-        - name: Deploy
-          uses: reggionick/s3-deploy@v2
-          with:
-            folder: public
-            bucket: ${{ secrets.S3_BUCKET }}
-            bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-            dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-            invalidation: /
-            delete-removed: true

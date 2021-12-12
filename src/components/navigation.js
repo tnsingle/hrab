@@ -1,7 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export default class Navigation extends React.Component {
     constructor (props) {
@@ -40,9 +37,9 @@ export default class Navigation extends React.Component {
         const rootPath = `${__PATH_PREFIX__}/`;
         return (
             <nav className={`o-nav all-css-transition absolute${this.state.isNavOpen ? " -open" : ""}${location.pathname !== rootPath ? " -small" : ""}`}>
-            <button class={`o-nav__burger f1 white fas fa-bars${location.pathname !== rootPath ? " pa3" : " pa5"}`} onClick={e => {this.toggleNav(e);}}></button>
+            <button aria-label="Menu" class={`o-nav__burger f1 white fas fa-bars${location.pathname !== rootPath ? " pa3" : " pa5"}`} onClick={e => {this.toggleNav(e);}}></button>
             <div className="o-nav__menu absolute top-0">
-            <button class={`o-nav__close f1 white${location.pathname !== rootPath ? " pa3" : " pa5"}`} onClick={e => {this.toggleNav(e);}}></button>
+            <button aria-label="Close Menu" class={`o-nav__close f1 white${location.pathname !== rootPath ? " pa3" : " pa5"}`} onClick={e => {this.toggleNav(e);}}></button>
             <ul className="o-nav__list list f4 ma0 ph3 pb5 pv3">
                 {
                     items.map(item => (
