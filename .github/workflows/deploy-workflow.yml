@@ -33,14 +33,11 @@ jobs:
         - name: Setup yarn
           run: npm install -g yarn
 
-        - name: Add Gatsby Cli
-          run: yarn add gatsby-cli
-
         - name: Install dependencies
-          run: yarn
+          run: yarn install
 
         - name: Build
-          run: gatsby clean && gatsby build
+          run: yarn cache clean && yarn build
 
         - name: Deploy
           uses: reggionick/s3-deploy@v2
