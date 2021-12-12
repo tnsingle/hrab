@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Timeline from "../components/timeline"
 import ShoutBoardContainer from "../components/shout-board-container"
 import Steps from "rsuite/lib/Steps";
@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
-        <SEO
+        <Seo
           title="Be the change."
           lang="en"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`, `giving tuesday`, `aggie pride`, `aggie born, aggie bred`, `ncat`, `black history`]}
@@ -144,7 +144,7 @@ class IndexPage extends React.Component {
               <h3 className="f2 brand-gold">Mail Your Donation</h3>
               <p className="f4">Please make your check payable to: <br/>NC A&T Foundation Inc.</p>
               <a href="https://cdn.singletaryscholarship.fund/forms/ncat-gift-form.pdf" target="_blank" 
-              className="a-donate-pdf link brand-gold-bg black ttu pv3 ph4 mb3 br3 f5 b dib">Download PDF Form</a>
+              className="a-donate-pdf link brand-gold-bg black ttu pv3 ph4 mb3 br3 f5 b dib" rel="noreferrer">Download PDF Form</a>
               <p className="f4">Designation: <br/>Harrison R & Azzie Bell Singletary Endowed Scholarship<br/><br/>
 
                 Kenneth E. Sigmon, Jr. <br/>
