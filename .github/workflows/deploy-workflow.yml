@@ -32,12 +32,12 @@ jobs:
 
         - name: Setup yarn
           run: npm install -g yarn
-       
-        - name: Install dependencies
-          run: yarn
 
         - name: Add Gatsby Cli
           run: yarn add gatsby-cli
+
+        - name: Install dependencies
+          run: yarn
 
         - name: Build
           run: gatsby clean && gatsby build
