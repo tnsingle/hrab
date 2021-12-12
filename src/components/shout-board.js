@@ -17,8 +17,7 @@ export default function ShoutBoard({ className }) {
                   transformOptions: { fit: CONTAIN }
                   backgroundColor: "transparent"
                 )
-              },
-              publicURL
+              }
             }
           }
           Name

@@ -110,7 +110,7 @@ class IndexPage extends React.Component {
               Please help us reach this goal. By doing so you are investing in the <span className="brand-gold">future of the youth in our communities</span>.
           </p>
             </div>
-          <div className="w-40-l"><StaticImage src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" alt="A spilled jar of coins with the word 'Donate' written on a piece of paper"/></div>
+          <div className="w-40-l"><StaticImage src="https://cdn.singletaryscholarship.fund/images/donate_900.jpg" width="615" alt="A spilled jar of coins with the word 'Donate' written on a piece of paper"/></div>
           
           </div>
           <div className="mb5"><a href="#" onClick={e => {
