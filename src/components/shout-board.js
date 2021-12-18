@@ -13,8 +13,8 @@ export default function ShoutBoard({ className }) {
             localFiles {
               childImageSharp {
                 gatsbyImageData(
-                  width: 75
-                  transformOptions: { fit: CONTAIN }
+                  width: 80
+                  height: 80
                   backgroundColor: "transparent"
                 )
               }
@@ -56,54 +56,55 @@ export default function ShoutBoard({ className }) {
       const degree = content.data.Degree;
       const year = content.data.Graduating_Class;
       const displayColor = content.data.Display_Color ? content.data.Display_Color : "blue"
-      const className = "m-shout__top white pa4 tc f4 flex justify-center items-center brand-" + displayColor + "-bg"
+      const rightWrapperClassName = "m-shout__right pa3 tc f4 flex flex-column justify-between items-center flex-auto"
+      const wrapperClassName = "m-shout br3 overflow-hidden shadow-4 ma2 flex brand-" + displayColor + "-bg"
+      const leftWrapperClassName = "m-shout__left flex flex-column justify-start items-center mv3 w-34 white"
+      const firstLetter = name ? name.charAt(0) : "?"
 
       return(
-        <div className="m-shout bg-white br3 overflow-hidden shadow-4 ma2" key={index}>
-          <div className={className}>{quote}</div>
-          <div className="m-shout__bottom flex flex-column justify-between">
-            <div className="m-shout__bio flex pa3">
-              { image ? (<div className="m-shout__img-wrapper overflow-hidden">
-                <GatsbyImage image={image} />
-              </div>) : ""}
-              
+        <div className={wrapperClassName} key={index}>
+          <div className={leftWrapperClassName}>
+            <div className="m-shout__img-wrapper">
+            <div className="m-shout__img overflow-hidden brand-gold-bg tc flex justify-center items-center black br-100">
+            { image ? (<GatsbyImage image={image} />) : (<span className="f3 fw3">{firstLetter}</span>)}
+            </div>
+            </div>
+            <div className="m-shout__bio flex flex-column justify-between ph3 pt3 tc">
               <div className="m-shout__desc f6 pl2">
                 <h3 className="f6 ttu mb2">{name}</h3>
                 {degree ? (
-                <p className="lh-solid gray mb0">{degree}</p>
+                <p className="lh-solid mb2 f7 fw3">{degree}</p>
             ) : ""}
 
-              {year > 0 ? (
-                <span className="b f7">c/o {year}</span>
-            ) : ""}
-                
-                
-              </div>
-            </div>
-
-
-            {hasSocial ? (
-                <div className="m-shout__social ph3 pb3">
-
-                {fb ? ( <a href={fb} className="fab fa-facebook link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Facebook</span></a> ) : "" } 
-
-                {twitter ? ( <a href={twitter} className="fab fa-twitter link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Twitter</span></a> ) : "" }
-                
-                { linkedIn ? ( <a href={linkedIn} className="fab fa-linkedin link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Connect with {name} on LinkedIn</span></a> ) : "" }
-
-                { instagram ? ( <a href={instagram} className="fab fa-instagram link dib black pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Instagram</span></a> ) : "" }
-              </div>
-            ) : ""}
-
-              {hasBusiness ? (
-                <div className="ph3 pb3 f6 b"><span className="ttu gray f7 db normaml">Business</span>
+{hasBusiness ? (
+                <div className="f7 b">
                   {businessURL ? (<a href={businessURL}>{businessName ? businessName : businessURL}</a>) : businessName ? businessName : ""}
                   </div>
 
               ) : ""}
-            
-            
+              </div>
+              {hasSocial ? (
+                <div className="m-shout__social ph3 pb3">
+
+                {fb ? ( <a href={fb} className="fab fa-facebook link dib white pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Facebook</span></a> ) : "" } 
+
+                {twitter ? ( <a href={twitter} className="fab fa-twitter link dib white pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Twitter</span></a> ) : "" }
+                
+                { linkedIn ? ( <a href={linkedIn} className="fab fa-linkedin link dib white pr2" target="_blank" rel="noreferrer"><span className="clip">Connect with {name} on LinkedIn</span></a> ) : "" }
+
+                { instagram ? ( <a href={instagram} className="fab fa-instagram link dib white pr2" target="_blank" rel="noreferrer"><span className="clip">Follow {name} on Instagram</span></a> ) : "" }
+              </div>
+            ) : ""}
+            </div>
           </div>
+          <div className={rightWrapperClassName}>
+            <div class="m-shout__quote flex-auto fw3 white">{quote}</div>
+            <div className="footer flex justify-between items-start w-100">
+              {year > 0 ? (
+                  <span className="m-shout__class f7 mt3 dib h2 pv2 ph3 brand-gold-bg br-pill flex items-center normal">c/o {year}</span>
+              ) : ""}
+            </div>
+            </div>
         </div>
         
       )
