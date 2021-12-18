@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle} donateRef={ this.donate } showModal={ this.state.showModal } closeModal={this.closeModal}>
         <Seo
-          title="Be the change."
+          title="Because of you, we can."
           lang="en"
           keywords={[`scholarship`, `education`, `endowment`, `singletary`, `fundraising`, `hbcu`, `contribute`, `donate`, `community`, `college`, `american heritage`, `giving tuesday`, `aggie pride`, `aggie born, aggie bred`, `ncat`, `black history`]}
         />

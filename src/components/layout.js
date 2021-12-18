@@ -85,8 +85,8 @@ class Layout extends React.Component {
       },
       {
         href: "https://www.redbubble.com/people/HBCUishStickers/shop?asc=u",
-        title: "Stickers",
-        label: "Stickers"
+        title: "Our Shop",
+        label: "Our Shop"
       },
       {
         href: "/#contact",
