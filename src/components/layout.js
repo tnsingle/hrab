@@ -98,7 +98,7 @@ class Layout extends React.Component {
       },
       {
         href: "/aggiepride",
-        title: "Aggie Pride Shout Board",
+        title: "What Does Aggie Pride Mean to You?",
         label: "Aggie Pride!"
       },
       {
