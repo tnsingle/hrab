@@ -32,7 +32,7 @@
     "gatsby-remark-images": "^3.3.9",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-remark-vscode": "^2.1.2",
+    "gatsby-remark-vscode": "^3.3.1",
     "gatsby-source-airtable": "^2.2.1",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-sharp": "^4.3.0",

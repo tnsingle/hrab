@@ -6848,18 +6848,18 @@ gatsby-remark-smartypants@^2.0.9:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-vscode@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-2.1.2.tgz#c0644b1c51ca2dfc06f7bb661e8973191e0493ea"
-  integrity sha512-9owTmsM8+5JSARav3VzotA5+U30EzpCemaZLJhlf+v9cvd7hcSX9DzLH87rIhcEpalmMYnrwOSnLGqt5WGkfGA==
+gatsby-remark-vscode@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-3.3.1.tgz#0a42583d3f7ccc043ddef9c5c4cfb0a677a190cd"
+  integrity sha512-KUCDU8KauLikURYuGyAZ0aLhHhd/BP2XwzP/WP0wkgyKjh650PwewQghwpD9g2wVkN+fThFJDs4G64K4fduDGQ==
   dependencies:
     decompress "^4.2.0"
     json5 "^2.1.1"
     loglevel "^1.6.4"
-    oniguruma "^7.2.0"
     plist "^3.0.1"
     unist-util-visit "^1.4.1"
-    vscode-textmate "4.2.2"
+    vscode-oniguruma "^1.4.0"
+    vscode-textmate "^5.2.0"
 
 gatsby-source-airtable@^2.2.1:
   version "2.2.1"
@@ -10180,7 +10180,7 @@ mute-stream@0.0.8, mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nan@^2.14.0, nan@^2.14.2:
+nan@^2.14.2:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
@@ -10633,13 +10633,6 @@ onetime@^5.1.0, onetime@^5.1.2:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
-
-oniguruma@^7.2.0:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/oniguruma/-/oniguruma-7.2.3.tgz#e0b0b415302de8cdd6564e57a1a822ac0ab57012"
-  integrity sha512-PZZcE0yfg8Q1IvaJImh21RUTHl8ep0zwwyoE912KqlWVrsGByjjj29sdACcD1BFyX2bLkfuOJeP+POzAGVWtbA==
-  dependencies:
-    nan "^2.14.0"
 
 open@^7.0.2, open@^7.0.3:
   version "7.4.2"
@@ -14770,12 +14763,15 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vscode-textmate@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-4.2.2.tgz#0b4dabc69a6fba79a065cb6b615f66eac07c8f4c"
-  integrity sha512-1U4ih0E/KP1zNK/EbpUqyYtI7PY+Ccd2nDGTtiMR/UalLFnmaYkwoWhN1oI7B91ptBN8NdVwWuvyUnvJAulCUw==
-  dependencies:
-    oniguruma "^7.2.0"
+vscode-oniguruma@^1.4.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz#439bfad8fe71abd7798338d1cd3dc53a8beea94b"
+  integrity sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==
+
+vscode-textmate@^5.2.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.5.0.tgz#d83776562c07d1e3181c2c7f1b3d5f20afcab483"
+  integrity sha512-jToQkPGMNKn0eyKyitYeINJF0NoD240aYyKPIWJv5W2jfPt++jIRg0OSergubtGhbw6SoefkvBYEpX7TsfoSUQ==
 
 watchpack@^2.3.1:
   version "2.3.1"
