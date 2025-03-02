@@ -199,12 +199,12 @@ class Layout extends React.Component {
             </div>
                     
                     <p className="ph3 ph5-ns dark-gray f4-ns">You will be taken to North Carolina A&T's donation page:<br/> <a className="brand-blue"
-                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
-                    target="_blank" rel="noreferrer" >https://app.mobilecause.com/form/Rrgoyw?vid=lf43q</a>.</p>
-                    <p className="ph3 ph5-ns dark-gray f4-ns">Choose "Other" from the dropdown<br/>Then make your campaign designation to:<br/><br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
+                    href="https://www.givecampus.com/campaigns/28065/donations/new?designation=Harrison%20R%20and%20Azzie%20Bell%20Singletary%20Endowed%20Scholarship"
+                    target="_blank" rel="noreferrer" >https://www.givecampus.com/campaigns/28065/donations/new?designation=Harrison%20R%20and%20Azzie%20Bell%20Singletary%20Endowed%20Scholarship</a>.</p>
+                    <p className="ph3 ph5-ns dark-gray f4-ns">Make your campaign designation to:<br/><br/><strong>Harrison R & Azzie Bell Singletary Endowed Scholarship</strong></p>
                     <a 
                     className="link gtm-donate-external brand-gold-bg black ttu pv3 ph4 br3 f5 b dib mb3"
-                    href="https://app.mobilecause.com/form/Rrgoyw?vid=lf43q"
+                    href="https://www.givecampus.com/campaigns/28065/donations/new?designation=Harrison%20R%20and%20Azzie%20Bell%20Singletary%20Endowed%20Scholarship"
                     target="_blank" rel="noreferrer" >Continue</a>
                     <p className="ph3 ph5-ns gray f5">Report any questions or issues to <a className="link brand-blue" href="mailto:contact@singletaryscholarship.fund">contact@singletaryscholarship.fund</a>.</p>
           
