@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import ShoutBoard from "../components/shout-board"
 
-export default class ShoutBoardContainer extends React.Component {
+export default class ShoutBoardContainer extends Component {
     render() {
         return (
             <div className="o-shout-board w-100 flex flex-column flex-row-l">

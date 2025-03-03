@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Timeline from "../components/timeline"
 import ShoutBoardContainer from "../components/shout-board-container"
-import Steps from "rsuite/lib/Steps";
+import { Steps } from "rsuite";
 import { StaticImage } from "gatsby-plugin-image"
 
-class IndexPage extends React.Component {
+class IndexPage extends Component {
   constructor () {
     super();
     this.state = {

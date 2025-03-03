@@ -22,7 +22,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, `png`, `jpg`],
           placeholder: `none`,
           backgroundColor: `transparent`,
           tracedSVGOptions: {},
@@ -75,16 +74,12 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-vscode`,
-          },
-          {
             resolve: `gatsby-remark-copy-linked-files`,
           },
           {
             resolve: `gatsby-remark-smartypants`,
           },
         ],
-        plugins: [`gatsby-remark-images`],
       },
     },
     {
