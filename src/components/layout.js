@@ -1,10 +1,10 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import Modal from '../components/modal'
 import Navigation from '../components/navigation'
 import { StaticImage } from "gatsby-plugin-image"
 
-class Layout extends React.Component {
+class Layout extends Component {
   constructor (props) {
     super(props);
     this.state = {
