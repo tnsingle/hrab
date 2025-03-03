@@ -22,7 +22,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, `png`, `jpg`],
           placeholder: `none`,
           backgroundColor: `transparent`,
           tracedSVGOptions: {},
