@@ -12338,10 +12338,10 @@ rsuite-table@^5.19.1:
     lodash "^4.17.21"
     react-is "^17.0.2"
 
-rsuite@^5.78.0:
-  version "5.78.0"
-  resolved "https://registry.yarnpkg.com/rsuite/-/rsuite-5.78.0.tgz#9e926be8e59c3cadde2f77d4f64189ce5945ecc2"
-  integrity sha512-gXUv3Q0SA+cKHkCe8IRwUcc+ZFhE1IQdkh6z6HfLB2SDTlrVCS1kLe3BBhm+L5YJJ9hz5jSLccQLuHHv8z0Fow==
+rsuite@^5.78.1:
+  version "5.78.1"
+  resolved "https://registry.yarnpkg.com/rsuite/-/rsuite-5.78.1.tgz#95e457b71f59bc2465179fc18ab8837a042b30d4"
+  integrity sha512-OwKsAANAyUCFj0Pw0Il8OfmRaEVb5IaGFR/XC2gEa8D7wSC35K7a1qOWzfR42S8LquTBoTkbeFB3Te7MC62YSw==
   dependencies:
     "@babel/runtime" "^7.20.1"
     "@juggle/resize-observer" "^3.4.0"
