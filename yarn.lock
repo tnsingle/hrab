@@ -7023,10 +7023,10 @@ gatsby-sharp@^1.14.0:
   dependencies:
     sharp "^0.32.6"
 
-gatsby-source-airtable@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.4.3.tgz#07874bb734613ab0bf482b813116817c059dd496"
-  integrity sha512-6pOfOqTkXAfMTPeGyxjSIC33+jhtmTCkPuYciNm5qpftZIXk2XOO5u9slfsuMjCC2PoPPKatWAzu5R9Aoif+ew==
+gatsby-source-airtable@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-airtable/-/gatsby-source-airtable-2.4.4.tgz#c636ff6f2b0f9bafb72bbddf86f4fbbd6e44ee95"
+  integrity sha512-I/ajjSHGN2OPP4NH8NAsV1OHTpXQ2ak10q5W5LcoMONQAMaJcahky4uoZ2i0li4TaxcdDwLqCnwrqEDeMmx0Ig==
   dependencies:
     airtable "^0.12.2"
     bluebird "^3.7.2"
